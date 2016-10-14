@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2016-10-14 14:52:24
+ * @version $Id$
+ */
+body { margin: 0; }
+dl,
+dd { margin: 0; }
+ul,
+li,
+h2,
+h1,
+p,
+em { border: none; margin: 0; outline: none; padding: 0; list-style-type: none; font-weight: normal; font-family: "microsoft yahei"; font-size: 12px; }
+em { text-decoration: none; font-style: normal; }
+.clearfix { clear: both; }
+img { border: none; display: block; }
+a { text-decoration: none; font-size: 12px; color: #7d7d8c; }
+* { font-family: "microsoft yahei", "arial"; }
+input,
+select,
+botton { border: none; margin: 0; outline: none; padding: 0; }
+.fl { float: left; }
+
+.icon{ display: block; background-image: url(../images/ico.png); background-position: -9999px -9999px; background-repeat: no-repeat; }
+/* 页头 */
+.header{ width: 1200px; height: 70px; margin: 0 auto; }
+/*页脚*/
+.foot { background: #333; padding-top: 40px; }
+.foot-box { width: 1200px; margin: 0 auto 20px; overflow: hidden; }
+.foot-box .foot-l { float: left; margin-left: 60px; margin-right: 40px; }
+.foot-box .box-a h2,
+.foot-box .box-c h2 { color: #e5e5e5; font-size: 14px; line-height: 26px; }
+.foot-box .box-a a { color: #808080; line-height: 22px; display: block; }
+.foot-box .box-b h2 { color: #999; font-size: 24px; }
+.foot-box .box-b i { background-position: -148px 0; width: 28px; height: 28px; float: left; _display:inline; margin-right: 12px;}
+.foot-box .box-b p { color: #808080; line-height: 22px; display: block; }
+.foot-box .box-b a { display: block; width: 160px; height: 26px; line-height: 26px; color: #fff; background: #da1f2e; text-align: center; margin-top: 10px; }
+.foot-box .box-b a:hover { color: #fff; }
+.foot-box .box-c { text-align: center; overflow: hidden; }
+.foot-box .box-c a { color: #808080; line-height: 22px; display: block; }
+.foot-box .box-c .foot-w img { width: 100px; height: 100px; display: block; float: left; }
+.foot-box a:hover,
+.foot-box .box-b p:hover { color: #fb4e4e; }
+
+/*首页版权*/
+.foot-copy { width: 1200px; margin: 0 auto; text-align: center; padding: 20px 0 30px; border-top: 1px solid #4c4c4c; color: #999; overflow: hidden; }
+.foot-copy a { color: #999; font-size: 14px; }
+.foot-copy a:hover { color: #fb4e4e; }
+.foot-copy span { color: #999; padding: 0 5px; }
+.foot-copy p { color: #666; line-height: 26px; }
+
+/*页脚白*/
+.yb { width: 100%; border-top: 1px #e5e5e5 solid; height: 45px; padding-top: 20px; margin-top: 40px; margin-bottom: 20px; }
+.yb ul { width: 1200px; height: 45px; border-left: 1px solid #e5e5e5; margin: 0 auto; overflow: hidden;}
+.yb ul li { border-right: 1px solid #e5e5e5; width: 194px; padding-left: 105px; float: left; position: relative; line-height: 18px;}
+.yb ul li i { width: 32px; height: 32px; position: absolute; top: 7px; left: 54px;}
+.yb ul li i.t1 { background-position: 0 0; }
+.yb ul li i.t2 { background-position: -37px 0; }
+.yb ul li i.t3 { background-position: -74px 0; }
+.yb ul li i.t4 { background-position: -111px 0; }
+.yb ul li .h2 { color: #333; font-weight: bold; margin-bottom: 9px;}
+.yb ul li p { color: #666; }
