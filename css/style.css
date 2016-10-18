@@ -24,10 +24,51 @@ input,
 select,
 botton { border: none; margin: 0; outline: none; padding: 0; }
 .fl { float: left; }
+.icon { display: block; background-image: url(../images/ico.png); background-position: -9999px -9999px; background-repeat: no-repeat; }
 
-.icon{ display: block; background-image: url(../images/ico.png); background-position: -9999px -9999px; background-repeat: no-repeat; }
 /* 页头 */
-.header{ width: 1200px; height: 70px; margin: 0 auto; }
+.wrap { width: 1200px; margin: 0 auto; }
+.header { width: 100%; }
+.head-top { width: 100%; height: 30px; position: relative; height: 35px; background: #f9f9f9; border-bottom: 1px solid #eee; z-index: 3000; width: 100%; }
+.head-con { height: 70px; padding: 10px; position: relative; overflow: hidden; }
+.head-con .logo { float: left; display: block; margin-top: -15px; padding-right: 100px; }
+.head-con .sreach_box { margin-top: 15px; float: left; }
+.head-con .sreach_box .keyword { background: url(http://www.51taogoo.com/images/hq_jin.png) no-repeat 20px; padding-left: 46px; width: 350px; height: 36px; border: 2px solid #da1f2e; float: left; font-size: 16px; color: #b4b4b4; }
+.head-con .sreach_box .home_submit { font-family: "microsoft yahei"; width: 100px; height: 40px; background: #da1f2e; color: #FFF; font-size: 16px; float: left; }
+.head-con .tel { position: absolute; top: 20px; right: 0; padding-left: 40px; font-size: 24px; font-weight: bold; font-family: "arial"; color: #da1f2e; }
+.head-con .tel-icon { background: url(http://www.51taogoo.com/images/header_dian.png) no-repeat; display: block; width: 30px; height: 30px; position: absolute; top: 0; left: 0; }
+
+/* 导航 */
+.header-nav { height: 40px; width: 100%; border-bottom: 2px solid #01af63; position: relative; z-index: 999; display: table; }
+.header-menu { height: 40px }
+.header-menu ul li { padding: 0 20px; float: left; height: 40px; line-height: 40px; font-size: 16px; position: relative }
+.header-menu ul li a { color: #333; text-decoration: none; display: block; padding: 0 25px; }
+.header-menu ul li a:hover { color: #f25618 }
+.header-menu ul li.on,
+.header-menu ul li.menu_hover { background: #01af63 }
+.header-menu ul li.on a,
+.header-menu ul li.menu_hover a { color: #fff }
+.header-menu ul li.on a:hover,
+.header-menu ul li.menu_hover a:hover { color: #fff }
+.header-menu ul li.has_secondMenu { padding: 0; width: 176px; }
+.header-menu ul li.has_secondMenu a { padding: 0; }
+.header-menu ul li.has_secondMenu a em { width: 7px; height: 4px; position: absolute; top: 20px; background-position: -77px 0; }
+.header-menu ul li.has_secondMenu a em.menu_arrow { right: 49px }
+.header-menu ul li.has_secondMenu a em.menu_arrow_two { right: 65px }
+.header-menu ul li.on a em { background-position: -98px 0 }
+.header-menu ul li.menu_hover a em { background-position: -84px 0 }
+.header-menu ul li.has_secondMenu span { float: left; margin-left: 45px; display: inline; cursor: pointer; }
+.header-menu ul li.has_secondMenu dl { position: absolute; top: 40px; left: 0; background: #019d59; font: 12px/1.5 tahoma, arial, \5b8b\4f53; width: 176px; display: none; border-top: 2px solid #01af63 }
+.header-menu ul li.menu_hover dl { display: block }
+.header-menu ul li.has_secondMenu dl dd { padding: 11px 0; float: left; font-size: 0 }
+.header-menu ul li.has_secondMenu dl dd a { padding-left: 45px; height: 32px; line-height: 32px; width: 131px; display: inline-block; font-size: 12px; font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu; position: relative; }
+.header-menu ul li.has_secondMenu dl dd a i { height: 11px; width: 18px; display: block; background: url(http://img.to8to.com/to8to_img/global.png) no-repeat; background-position: -201px -16px; display: inline-block; margin-left: 5px; margin-top: -13px; vertical-align: middle; }
+.header-menu ul li.has_secondMenu dl dd a i.hot { width: 17px; background-position: -49px -16px; }
+.header-menu ul li.has_secondMenu dl dd a:hover { background: #018d50; color: #fff }
+.header-menu ul li  b { width: 1px; position: absolute; right: 0; top: 13px; height: 16px; background: #eee; overflow: hidden }
+.header-menu ul li.menu_hover b,
+.header-menu ul li.on b { display: none }
+
 /*页脚*/
 .foot { background: #333; padding-top: 40px; }
 .foot-box { width: 1200px; margin: 0 auto 20px; overflow: hidden; }
@@ -36,7 +77,7 @@ botton { border: none; margin: 0; outline: none; padding: 0; }
 .foot-box .box-c h2 { color: #e5e5e5; font-size: 14px; line-height: 26px; }
 .foot-box .box-a a { color: #808080; line-height: 22px; display: block; }
 .foot-box .box-b h2 { color: #999; font-size: 24px; }
-.foot-box .box-b i { background-position: -148px 0; width: 28px; height: 28px; float: left; _display:inline; margin-right: 12px;}
+.foot-box .box-b i { background-position: -148px 0; width: 28px; height: 28px; float: left; _display: inline; margin-right: 12px; }
 .foot-box .box-b p { color: #808080; line-height: 22px; display: block; }
 .foot-box .box-b a { display: block; width: 160px; height: 26px; line-height: 26px; color: #fff; background: #da1f2e; text-align: center; margin-top: 10px; }
 .foot-box .box-b a:hover { color: #fff; }
@@ -55,12 +96,12 @@ botton { border: none; margin: 0; outline: none; padding: 0; }
 
 /*页脚白*/
 .yb { width: 100%; border-top: 1px #e5e5e5 solid; height: 45px; padding-top: 20px; margin-top: 40px; margin-bottom: 20px; }
-.yb ul { width: 1200px; height: 45px; border-left: 1px solid #e5e5e5; margin: 0 auto; overflow: hidden;}
-.yb ul li { border-right: 1px solid #e5e5e5; width: 194px; padding-left: 105px; float: left; position: relative; line-height: 18px;}
-.yb ul li i { width: 32px; height: 32px; position: absolute; top: 7px; left: 54px;}
+.yb ul { width: 1200px; height: 45px; border-left: 1px solid #e5e5e5; margin: 0 auto; overflow: hidden; }
+.yb ul li { border-right: 1px solid #e5e5e5; width: 194px; padding-left: 105px; float: left; position: relative; line-height: 18px; }
+.yb ul li i { width: 32px; height: 32px; position: absolute; top: 7px; left: 54px; }
 .yb ul li i.t1 { background-position: 0 0; }
 .yb ul li i.t2 { background-position: -37px 0; }
 .yb ul li i.t3 { background-position: -74px 0; }
 .yb ul li i.t4 { background-position: -111px 0; }
-.yb ul li .h2 { color: #333; font-weight: bold; margin-bottom: 9px;}
+.yb ul li .h2 { color: #333; font-weight: bold; margin-bottom: 9px; }
 .yb ul li p { color: #666; }
