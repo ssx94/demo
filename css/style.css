@@ -94,11 +94,7 @@ botton { border: none; margin: 0; outline: none; padding: 0; }
 .foot-copy span { color: #999; padding: 0 5px; }
 .foot-copy p { color: #666; line-height: 26px; }
 
-.fast-wrap .f-btn{ width:58px; height:38px; line-height:38px; text-align:center; font-size:14px; color:#fff; background:#499bfc; margin:1px 0 0 5px; position: relative;}
-.fast-wrap .f-btn .tips{ width: 282px; height: 84px; position: absolute; top: 48px; right: -47px; display: none;}
-.fast-wrap .f-btn .arrow {position: absolute; left: 201px; top: -12px; display: block; width: 0; height: 0; font-size: 0; line-height: 0; border-width: 6px 5px; border-color: transparent transparent #3e3f40 transparent; border-style: dashed dashed solid dashed; opacity: .85; filter: alpha(opacity=85); overflow: hidden;}
-.fast-wrap .f-btn em {display: block; width: auto; padding: 5px 10px; color: #fff; line-height: 18px; font-size: 12px; font-weight: normal; text-align: left; background: #000; opacity: .65; filter: alpha(opacity=65); cursor: default;}
-.fast-wrap .f-btn:hover{ background:#4380fc}
+.fast-wrap .f-btn{ width:58px; height:38px; line-height:38px; text-align:center; font-size:14px; color:#fff; background:#499bfc; margin:1px 0 0 5px;}
 .fast-wrap .q-input{ width:200px; height:38px; border:1px solid #e5e6ea; -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px;background:#fff; overflow:hidden }
 .grid-1200 .fast-wrap .q-input{ width:300px;}
 
