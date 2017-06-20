@@ -123,6 +123,8 @@ a{
 	line-height: 20px;
 	color: #888;
 	font-size: 14px;
+	list-style: none;
+	list-style-type:none;
 }
 
 /* table外元素 */
