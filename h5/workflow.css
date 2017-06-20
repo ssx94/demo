@@ -126,6 +126,8 @@ a{
 	line-height: 20px;
 	color: #888;
 	font-size: 14px;
+	width: 100%;
+  float: none;
 }
 
 /* table外元素 */
