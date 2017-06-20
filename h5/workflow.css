@@ -24,8 +24,9 @@ body {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
 	display: block;
 }
-nav ul {
+nav ul, li {
 	list-style: none;
+	list-style-type:none;
 }
 a {
 	margin: 0;
@@ -123,8 +124,6 @@ a{
 	line-height: 20px;
 	color: #888;
 	font-size: 14px;
-	list-style: none;
-	list-style-type:none;
 }
 
 /* table外元素 */
