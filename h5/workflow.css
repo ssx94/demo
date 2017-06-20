@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+/* 重置 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	line-height: 1;
+}
+:focus {
+	outline: 1;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+nav ul {
+	list-style: none;
+}
+a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 页面内容 */
+body {
+	color: #333;
+	background: #F2F3F8;
+}
+a{
+	color: #5195e3;
+}
+/* .l-section{}块  */
+.l-section {
+	width: 100%;
+	position: relative;
+}
+
+/* 块头 */
+.m-checklists-hd {
+}
+
+/* 块标题 */
+.title {
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #888;
+	font-size: 15px;
+	line-height: 20px;
+	margin: 15px 0 10px;
+	font-weight: normal;;
+}
+
+/* 主体内容 */
+.m-checklists-bd {
+}
+
+/* ul列表 */
+.m-checklists {
+	background: #fff;
+}
+
+/* li行 */
+.m-checklists-item {
+	padding: 10px 0;
+	line-height: 20px;
+	text-align: right;
+	position: relative;
+}
+
+/* 行KEY */
+.m-checklists-item-hd {
+	padding-left: 10px;
+	font-size: 14px;
+	color: #888;
+	float: left;
+  margin-right: 25px;
+  min-width: 85px;
+  color: #999999;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+/* 行value */
+.m-checklists-item-ct {
+	padding-right: 10px;
+  overflow: hidden;
+  word-break: normal;
+  word-wrap: break-word;
+  font-size: 15px;
+  color: #333;
+}
+
+/* 行value,加粗 */
+.bold {
+	-font-weight: bold;
+}
+
+/* 带table行 */
+.m-checklists-item.m-checklists-table {
+}
+
+/* table外元素 */
+.m-sgrid {
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: auto;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* table */
+.m-sgrid-inner {
+	white-space: nowrap;
+	border-bottom: 1px solid #EDEDEE;
+	margin-bottom: 20px;
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: separate;
+	max-width: 100%;
+	background-color: transparent;
+	empty-cells: show;
+	box-sizing: border-box;
+	display: table;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+}
+
+/* td */
+.m-sgrid-td {
+	border-left: 1px solid #EDEDEE;
+	border-top: 1px solid #EDEDEE;
+	padding: 10px;
+}
+
+/* 脚 */
+.m-checklists-ft {
+}
+
+/* 脚内容 */
+.m-checklists-ft .bd {
+}
+
+/* 分隔线 */
+.hr {
+	box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/* 上边距 */
+.margin-t10 {
+	margin-top: 10px;
+}
+
+
+/* 上边框 */
+.m-checklists-item:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1px;
+	border-top: 1px solid #EDEDEE;
+	color: #EDEDEE;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+	z-index: 2;
+}
+/* 下边框 */
+.m-checklists:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #EDEDEE;
+    color: #EDEDEE;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
