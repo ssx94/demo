@@ -117,10 +117,19 @@ a{
 
 /* 带table行 */
 .m-checklists-item.m-checklists-table {
+	background: #F2F3F8;
+	line-height: 0;
+}
+.m-checklists-item.m-checklists-table .m-checklists-item-hd {
+	margin: 5px 0;
+	line-height: 20px;
+	color: #888;
+	font-size: 15px;
 }
 
 /* table外元素 */
 .m-sgrid {
+	background: #FFF;
 	width: 100%;
 	overflow-y: hidden;
 	overflow-x: auto;
@@ -132,7 +141,6 @@ a{
 .m-sgrid-inner {
 	white-space: nowrap;
 	border-bottom: 1px solid #EDEDEE;
-	margin-bottom: 20px;
 	width: 100%;
 	border-spacing: 0;
 	border-collapse: separate;
@@ -147,6 +155,12 @@ a{
 }
 
 /* td */
+.m-sgrid-th {
+	border-left: 1px solid #EDEDEE;
+	border-top: 1px solid #EDEDEE;
+	padding: 10px;
+	color: #7E9CB4;
+}
 .m-sgrid-td {
 	border-left: 1px solid #EDEDEE;
 	border-top: 1px solid #EDEDEE;
@@ -155,10 +169,19 @@ a{
 
 /* 脚 */
 .m-checklists-ft {
+	background: #FFF;
 }
 
 /* 脚内容 */
 .m-checklists-ft .bd {
+	position: relative;
+}
+.m-checklists-ft .bd .content {
+	padding: 10px;
+	line-height: 20px;
+	color: #333;
+	font-size: 15px;
+	position: relative;
 }
 
 /* 分隔线 */
@@ -175,7 +198,7 @@ a{
 
 
 /* 上边框 */
-.m-checklists-item:before {
+.m-checklists-item:before,.m-checklists-ft .bd .content:before {
 	content: " ";
 	position: absolute;
 	left: 0;
@@ -191,7 +214,7 @@ a{
 	z-index: 2;
 }
 /* 下边框 */
-.m-checklists:after {
+.m-checklists:after,.m-checklists-ft .bd:after {
     content: " ";
     position: absolute;
     left: 0;
