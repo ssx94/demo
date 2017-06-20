@@ -57,16 +57,16 @@ a{
 
 /* 块头 */
 .m-checklists-hd {
+	padding: 5px 0;
 }
 
 /* 块标题 */
 .title {
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	color: #888;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 20px;
-	margin: 15px 0 10px;
 	font-weight: normal;;
 }
 
@@ -95,9 +95,7 @@ a{
 	float: left;
   margin-right: 25px;
   min-width: 85px;
-  color: #999999;
-  text-align: justify;
-  text-align-last: justify;
+  text-align: left;
 }
 
 /* 行value */
@@ -112,7 +110,7 @@ a{
 
 /* 行value,加粗 */
 .bold {
-	-font-weight: bold;
+	/* font-weight: bold; */
 }
 
 /* 带table行 */
@@ -120,11 +118,11 @@ a{
 	background: #F2F3F8;
 	line-height: 0;
 }
-.m-checklists-item.m-checklists-table .m-checklists-item-hd {
-	margin: 5px 0;
+.m-checklists-table .m-checklists-item-hd {
+	padding: 5px 0 5px 10px;
 	line-height: 20px;
 	color: #888;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 /* table外元素 */
@@ -155,13 +153,13 @@ a{
 }
 
 /* td */
-.m-sgrid-th {
+.m-checklists-table th,.m-checklists-table .m-sgrid-th {
 	border-left: 1px solid #EDEDEE;
 	border-top: 1px solid #EDEDEE;
 	padding: 10px;
 	color: #7E9CB4;
 }
-.m-sgrid-td {
+.m-checklists-table td,.m-checklists-table .m-sgrid-td {
 	border-left: 1px solid #EDEDEE;
 	border-top: 1px solid #EDEDEE;
 	padding: 10px;
@@ -180,7 +178,7 @@ a{
 	padding: 10px;
 	line-height: 20px;
 	color: #333;
-	font-size: 15px;
+	font-size: 14px;
 	position: relative;
 }
 
