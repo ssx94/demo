@@ -1,0 +1,134 @@
+/* body{font-size: 14px;} */
+.fz12 { font-size: 12px !important; }
+.bg-gray{background: #f4f4f4;}
+img { width: 100%;}
+/* ###登录页### */
+.logo_hd { width: 67%; margin: 15% auto 2.5%; }
+.logo_hd img { width: 100%; display: block; }
+.logo_form { width: 80%; margin: 30px auto 0; }
+.logo_form .weui-cell { padding-top: 20px; padding-bottom: 0; height: 40px; }
+.logo_form .weui-label { width: 40px; }
+.logo_form .weui-vcode-img { height: 40px; }
+.logo_form .weui-btn-area { margin-top: 40px; }
+.btn-clear { display: block; width: 20px; height: 20px; position: absolute; right: 12px; bottom: 8px; }
+.btn-eye { display: block; width: 20px; height: 13px; position: absolute; right: 40px; bottom: 11px; }
+.btn-clear img,.btn-eye img { display: block; width: 100%; }
+.logo_form .weui-label img { width: 20px; position: absolute; bottom: 6px; }
+.logo_form .weui-cells_form { position: relative; font-size: 14px; }
+.logo_form .weui-cell:before { left: 0; border-bottom: 2px solid #f6f6f6; color: #f6f6f6; }
+.logo_form .weui-cells_form:after { content: " "; position: absolute; left: 0; bottom: -2px; right: 0; height: 1px; border-bottom: 2px solid #f6f6f6; color: #f6f6f6; z-index: 2 }
+.logo_form .btn-password { margin-right: 10px; margin-top: 15px; font-size: 14px; color: #A3AEB2; display: inline-block; float: right; }
+.hd-text { font-size: 14px; padding: 20px 0; text-align: center; }
+.btn-code { font-size: 12px; line-height: 40px; border-radius: 5px; }
+.wrong-text{color:#ff6e33}
+
+/* ###主页### */
+.hotel-info { padding: 10px 2.7% 0; background-color: #10a6f1; color: #fff; font-size: 14px; line-height: 19px; }
+.hotel-info .hotel-name a { color: #fff; }
+.hotel-info .hotel-name i { content: " "; display: inline-block; height: 4px; width: 4px; border-width: 2px 2px 0 0; border-color: #fff; border-style: solid; -webkit-transform: matrix(0.65, 0.65, -0.65, 0.65, 0, 0); transform: matrix(0.65, 0.65, -0.65, 0.65, 0, 0); margin-left: 3px; position: relative; top: -1px; }
+.hotel-info .hd-box { text-align: center; margin: 30px 0; padding: 8px 0; }
+.hotel-info .hd-box:first-child { border-right: 1px solid #fff; }
+.hotel-info .hd-box .type-num { font-size: 18px; line-height: 24px; margin-bottom: 3px; }
+.hotel-info .hd-box .type-num i { display: inline-block; width: 6px; height: 13px; margin-left: 5px; }
+.hotel-info .hd-box .type-num i.down { background: url(../images/down-arrow.png) no-repeat; background-size: 100%; }
+.hotel-info .hd-box .type-num i.up { background: url(../images/up-arrow.png) no-repeat; background-size: 100%; }
+
+/* 分类导航 */
+.main { padding: 0 2.7%; position: relative; }
+.main .main-nav { margin-top: -10px; padding-bottom: 30px; background-color: #fff; border-radius: 3px; text-align: center; overflow: hidden; }
+.main .main-nav a { display: block; width: 25%; float: left; color: #666E78; font-size: 12px; margin-top: 30px; }
+.main .main-nav a img { width: 30px; display: block; margin: 0 auto 10px; }
+.main .main-nav a span { display: block; }
+.main .gray img { -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: grayscale(100%); filter: gray; }
+.banner img { width: 100%; border-radius: 4px; margin-top: 10px; }
+
+/* ###设置当前酒店### */
+.search-hotel { line-height: 38px; background: #F8F8F8; font-size: 14px; color: #333; padding-left: 10px; }
+.searchbar-result.weui-cells { font-size: 14px; margin-top: 0; color: #666E78; }
+.searchbar-result.weui-cells .gray { color: #BCBCBC; cursor: default; }
+.weui-search-bar__cancel-btn { color: #1EABF1; }
+.search-bt a { width: 75%; }
+.search-bt .search-tips { font-size: 12px; color: #1EABF1; margin-top: 10px; }
+
+/* 订单管理 */
+.weui-navbar__item i { display: inline-block; line-height: 15px; background: #F26161; border-radius: 8px; color: #FFF; font-style: normal; padding: 0 4px; margin-left: 3px; font-size: 12px; }
+.order-list { font-size: 14px; background-color: #fff; line-height: 1.47058824; position: relative; }
+.order-list .hotel-name { font-size: 12px; color: #999; }
+.order-list .order-item { padding: 10px 15px; position: relative; list-style: none; }
+.order-list .order-item a{ display: block;}
+.order-list .order-item .num { float: right; color: #22A7F0; }
+.order-list .order-item p { margin: 3px 0; color: #666E78; }
+.order-list .order-item:after { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-top: 1px solid #e5e5e5; color: #e5e5e5; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(.5); transform: scaleY(.5); left: 15px; z-index: 2; }
+.order-list .order-btn-con { text-align: right; height: 25px; margin-top: 5px; }
+.order-list .order-btn-con a { width: 80px; line-height: 25px; font-size: 14px; display: inline-block; margin-left: 10px; margin-top: 0 !important; }
+.order-list .order-sign { width: 20px; height: 20px; position: absolute; top: -1px; left: 0; z-index: 9; background-size: 100%; background-repeat: no-repeat;}
+.order-list .order-sign.c{ background-image: url(../images/bnt-xie.png); }
+.order-list .order-sign.e{ background-image: url(../images/bnt-elong.png); }
+.order-list .order-sign.q{ background-image: url(../images/bnt-qu.png); }
+.order-type { line-height: 15px; overflow: hidden; }
+.order-type .icon { display: inline-block; float: left; padding: 1px 5px; border-radius: 8px; margin-right: 5px; margin-bottom: 3px; line-height: 15px; font-size: 9px; color: #fff; position: relative; }
+.order-type .icon.fast { background: #C81212; }
+.order-type .icon.new { background-image: -webkit-linear-gradient(to right, #FB593D, #FF7E5A); background-image: linear-gradient(to right, #FB593D, #FF7E5A); }
+.order-type .icon.change { background-image: -webkit-linear-gradient(to right, #3D6FFB, #B57EE2); background-image: linear-gradient(to right, #3D6FFB, #B57EE2); }
+.order-type .icon.cancel { background-image: -webkit-linear-gradient(to right, #3cc4fe, #56dcd1); background-image: linear-gradient(to right, #3cc4fe, #56dcd1); }
+.order-type .icon.handle { background-image: -webkit-linear-gradient(to right, #33cb9a, #62dfbf); background-image: linear-gradient(to right, #33cb9a, #62dfbf); }
+.order-type .icon.hollow { background: #FFF; color: #44C8F5; }
+.order-type .icon.hollow:after { content: " "; width: 200%; height: 200%; position: absolute; top: 0; left: 0; border: 1px solid rgba(68, 200, 245, 1); -webkit-transform: scale(.5); transform: scale(.5); -webkit-transform-origin: 0 0; transform-origin: 0 0; box-sizing: border-box; border-radius: 16px; }
+.no-data { width: 155px; margin: 125px auto 0; }
+.no-data img { width: 100%; display: block; }
+.no-data p { margin-top: 15px; color: #999; font-size: 12px; text-align: center; }
+/* ###详情详情### */
+.order-details{ padding-bottom: 50px; overflow: hidden; position: relative;}
+.order-details-title{ color: #666; font-size: 12px; margin: 12px 0 3px; padding: 0 15px;}
+.order-details-item{ background: #FFF; overflow: hidden; position: relative;}
+.order-form{ padding: 10px 15px; font-size: 14px; line-height: 20px; color: #666E78;}
+.order-details-item:after,.order-details-box:after { content: " "; position: absolute; left: 0; bottom: -1px; right: 0; height: 1px; border-top: 1px solid #E2E2E2; color: #E2E2E2; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(.5); transform: scaleY(.5); }
+.order-details-item:before { content: " "; position: absolute; left: 0; top: 0px; right: 0; height: 1px; border-top: 1px solid #E2E2E2; color: #E2E2E2; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(.5); transform: scaleY(.5); }
+.order-form p{ margin: 3px 0;}
+.order-form p.room-total{ color: #22A7F0;}
+.order-form p.room-price{ color: #8A8F95; font-size: 12px; margin: 0;}
+.order-form p.room-price span{ display: inline-block; width: 55px;}
+.order-form .weui-btn{ padding: 0; width: 148px; margin: 5px 0 15px; line-height: 18px; font-size: 12px; float: left; }
+.order-save-btn{ border-radius: 0; font-size: 18px; padding: 3px 0;}
+.btn-tel{ display: block; width: 20px; height: 20px; float: right;}
+.btn-tel img{ width: 100%;}
+.order-details-item .weui-cell__bd p{ font-size: 14px; color: #666E78;}
+.order-details-box{ font-size: 14px; color: #29AAF1; padding: 25px 15px; background: #FFF; position: relative;}
+.weui-textarea{font-family: -apple-system-font,Helvetica Neue,sans-serif;}
+.order-details-btn{ width: 53%; margin: 60px auto 0;}
+.order-details-btn a{ border-radius: 18px; line-height: 35px; background: #FDFDFD; color: #666E78;}
+.order-details-btn .weui-btn:after{ border: 1px solid #999;border-radius: 36px; }
+/* ###页尾### */
+.page__ft { padding: 20px 0 40px; text-align: center; }
+
+/* 固定页尾在底部 */
+.j_bottom { background: #fff; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; }
+.order-details-ft .weui-btn_submit{ border-radius: 0; font-size: 18px; color: #fff;}
+
+/*iscroll滚动刷新添加样式*/
+html, body {height: 100%;-webkit-overflow-scrolling: touch;}
+#wrapper {position: absolute;top: 84px;bottom: 0px;left: 0;width: 100%;overflow: hidden;}
+#scroller {position: absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);width: 100%;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);-o-transform: translateZ(0);transform: translateZ(0);
+		   -webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+		   -webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;-o-text-size-adjust: none;text-size-adjust: none;}
+#pullDown,#pullUp{  height:40px;  line-height:40px;  text-align:center;}
+
+/*使用avalon的页面默认隐藏*/
+.ms-controller{visibility: hidden}
+
+/* 订单审核 */
+.order-search .weui-cells{ margin-top: 15px; line-height: 30px;}
+.order-search .weui-cells:before{ border-top-width: 0;}
+.order-search .weui-cells:after{ left: 15px;}
+.order-search .weui-cell{ font-size: 14px;}
+.order-search .weui-label{ color: #666;}
+.order-search .weui-cell__bd{ color: #666E78;}
+.order-search .weui-select{ height: 50px; line-height: 50px; color: #666E78;}
+.order-search .page__ft{ font-size: 14px;}
+.order-search .weui-btn-area{ margin: 65px 48px 20px 48px;}
+.order-search .icon-date{ display: block; width: 22px; height: 20px; position: absolute; right: 15px; background: #fff url(../images/riqi.png) no-repeat; background-size: 100%;}
+
+::-webkit-input-placeholder {color: #999;}
+:-moz-placeholder {color: #999;}
+::-moz-placeholder {color: #999;}
+:-ms-input-placeholder {color: #999;}

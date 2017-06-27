@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>eBooking登录</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+</head>
+<body>
+<div class="page">
+    <div class="logo_hd"><img src="../images/login-banner.png"></div>
+    <div class="logo_form">
+        <div class="weui-cells_form">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label"><img src="../images/iconyhm.png"></label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="" placeholder="请输入用户名"/>
+                    <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label"><img src="../images/iconmm.png"></label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="" placeholder="请输入密码"/>
+                    <a class="btn-eye" href="javascript:void"><img src="../images/icon-eye.png"></a>
+                    <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_vcode">
+                <div class="weui-cell__hd"><label class="weui-label"><img src="../images/iconyanz.png"></label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="" placeholder="请输入验证码"/>
+                </div>
+                <div class="weui-cell__ft">
+                    <img class="weui-vcode-img" src="../images/vcode.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="weui-btn-area">
+            <!-- 输入内容用户名和密码之后删除'.weui-btn_disabled' -->
+            <a class="weui-btn weui-btn_gradual weui-btn_submit weui-btn_disabled" href="javascript:" id="showTooltips">绑定</a>
+            <a class="btn-password" href="javascript:void(0);">忘记密码</a>
+        </div>
+    </div>
+</div>
+
+<div id="dialogs" style="display: none;">
+    <!--BEGIN dialog1-->
+    <div class="js_dialog" id="iosDialog1" style="opacity: 1;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div class="weui-dialog__bd">用户名或密码输入错误</div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">关闭</a>
+                <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">找回密码</a>
+            </div>
+        </div>
+    </div>
+    <!--END dialog1-->
+</div>
+</body>
+</html>

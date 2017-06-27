@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+</head>
+<body style="background: #f6f6f9;">
+<div class="page">
+    <div class="page__bd order-details">
+        <div class="order-details-box">
+            此订单为保留房订单，按协议已经确认给客人，您确认拒单吗？
+        </div>
+        <div class="order-details-title">确定拒单，请选择理由</div>
+        <div class="order-details-item weui-cells_checkbox">
+            <label class="weui-cell weui-check__label" for="s1">
+                <div class="weui-cell__bd">
+                    <p>满房（关闭订单首日房）</p>
+                </div>
+                <div class="weui-cell__hd">
+                    <input type="radio" class="weui-check" name="radio" id="s1" checked="checked">
+                    <i class="weui-icon-checked"></i>
+                </div>
+            </label>
+            <label class="weui-cell weui-check__label" for="s2">
+                <div class="weui-cell__bd">
+                    <p>满房（关闭订单入住日房）</p>
+                </div>
+                <div class="weui-cell__hd">
+                    <input type="radio" name="radio" class="weui-check" id="s2">
+                    <i class="weui-icon-checked"></i>
+                </div>
+            </label>
+            <label class="weui-cell weui-check__label" for="s3">
+                <div class="weui-cell__bd">
+                    <p>其他（价格不符或特殊要求无法满足等）</p>
+                </div>
+                <div class="weui-cell__hd">
+                    <input type="radio" name="radio" class="weui-check" id="s3">
+                    <i class="weui-icon-checked"></i>
+                </div>
+            </label>
+        </div>
+        <div class="order-details-title">请输入拒单原因</div>
+        <div class="order-details-item">
+            <div class="order-form">
+                <textarea class="weui-textarea" placeholder="如：1.此房型已变价2.客人的特殊要求无法满足等" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="order-details-btn">
+            <a href="javascript:;" class="weui-btn">残忍的拒绝</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>订单审核</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+</head>
+<body class="bg-gray">
+<div class="page">
+    <div class="page__bd">
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <div class="weui-navbar__item weui-bar__item_on">待审核订单<i>80</i></div>
+                <div class="weui-navbar__item">审核历史</div>
+            </div>
+            <div class="weui-tab__panel">
+
+                <!-- 没有订单时显示 -->
+                <div class="no-data" style="display: none;">
+                    <img src="../images/no-data.png">
+                    <p>还没有订单哦~</p>
+                </div>
+                <!-- 没有订单 end -->
+
+                <!-- 订单列表 -->
+                <div class="order-list">
+                    <div class="order-item">
+                        <i class="order-sign e"></i>
+                        <a href="#">
+                            <p class="order-type">
+                                <span class="icon fast">急</span>
+                                <span class="icon new">新单</span>
+                                <span class="icon change">变更</span>
+                                <span class="icon cancel">取消</span>
+                                <!-- 空心带边框 -->
+                                <span class="icon hollow">一单一结</span>
+                                <span class="icon hollow">首晚</span>
+                                <span class="icon hollow">留</span>
+                                <span class="icon hollow">即时</span>
+                                <span class="icon hollow">免确认</span>
+                                <span class="icon hollow">全额</span>
+                                <span class="icon hollow">预付</span>
+                                <span class="icon hollow">直连</span>
+                                <!-- 已处理 -->
+                                <span class="icon handle">已取消确认</span>
+                                <span class="icon handle">有预定未到</span>
+                                <span class="icon handle">已拒单</span>
+                                <span class="icon handle">已确认</span>
+                                <span class="icon handle">已入住</span>
+                                <span class="icon handle">已离店</span>
+                            </p>
+                            <p class="hotel-name">API测试/NO.197981994</p>
+                            <p>hanyue</p>
+                            <p>标准间-大床房-不含早 1间<span class="num">RMB150</span></p>
+                            <p>2017.01.19至2017.01.22 住2晚</p>
+                        </a>
+                        <div class="order-btn-con"><a class="weui-btn order-btn" href="#">拒单</a><a class="weui-btn weui-btn_gradual weui-btn_submit" href="#">确认</a></div>
+                    </div>
+                    <div class="order-item">
+                        <i class="order-sign q"></i>
+                        <a href="#">
+                            <p class="order-type">
+                                <span class="icon fast">急</span>
+                                <span class="icon new">新单</span>
+                                <span class="icon hollow">留</span>
+                                <span class="icon hollow">预付</span>
+                                <span class="icon change">变更</span>
+                            </p>
+                            <p class="hotel-name">API测试/NO.197981994</p>
+                            <p>hanyue</p>
+                            <p>标准间-大床房-不含早 1间<span class="num">RMB150</span></p>
+                            <p>2017.01.19至2017.01.22 住2晚</p>
+                        </a>
+                        <div class="order-btn-con"><a class="weui-btn order-btn" href="#">拒单</a><a class="weui-btn weui-btn_gradual weui-btn_submit" href="#">确认</a></div>
+                    </div>
+                    <div class="order-item">
+                        <i class="order-sign c"></i>
+                        <a href="#">
+                            <p class="order-type">
+                                <span class="icon fast">急</span>
+                                <span class="icon new">新单</span>
+                                <span class="icon hollow">留</span>
+                                <span class="icon hollow">预付</span>
+                                <span class="icon change">变更</span>
+                            </p>
+                            <p class="hotel-name">API测试/NO.197981994</p>
+                            <p>hanyue</p>
+                            <p>标准间-大床房-不含早 1间<span class="num">RMB150</span></p>
+                            <p>2017.01.19至2017.01.22 住2晚</p>
+                        </a>
+                        <div class="order-btn-con"><a class="weui-btn order-btn" href="#">拒单</a><a class="weui-btn weui-btn_gradual weui-btn_submit" href="#">确认</a></div>
+                    </div>
+                </div>
+                <!-- 订单列表 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/zepto.min.js"></script>
+<script type="text/javascript" class="searchbar js_show">
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('weui-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('weui-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+</script>
+</body>
+</html>
