@@ -155,6 +155,7 @@ html, body {height: 100%;-webkit-overflow-scrolling: touch;}
 .audit-order .weui-cells:after{ left: 15px;}
 .audit-order .weui-cells.after-none:after{ border: 0;}
 .audit-order .weui-cell{ font-size: 14px;}
+.audit-order .weui-input{ line-height: 30px; height: 30px;}
 .audit-order .weui-label{ color: #666; width: 95px;}
 .audit-order .weui-cell__bd{ color: #666E78;}
 .audit-order .weui-select{ height: 50px; line-height: 50px; color: #666E78;}
