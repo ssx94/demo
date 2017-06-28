@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>订单审核</title>
+    <title>闪住审核</title>
     <link rel="stylesheet" href="../css/weui.min.css"/>
     <link rel="stylesheet" href="../css/app.css"/>
 </head>
@@ -12,8 +12,9 @@
     <div class="page__bd">
         <div class="weui-tab">
             <div class="weui-navbar">
-                <div class="weui-navbar__item weui-bar__item_on">待审核订单<i>80</i></div>
-                <div class="weui-navbar__item">审核历史</div>
+                <div class="weui-navbar__item">闪住待审<i>80</i></div>
+                <div class="weui-navbar__item weui-bar__item_on">闪住修改</div>
+                <div class="weui-navbar__item">闪住历史</div>
             </div>
             <div class="weui-tab__panel">
 
@@ -31,7 +32,6 @@
                         <div class="hotel-tit">API测试</div><!-- 集团酒店名称，没有不显示 -->
                         <!-- 订单列表 -->
                         <div class="order-item">
-                            <i class="icon-msg"></i>
                             <div class="order-info">
                                 <p class="order-type">
                                     <span class="icon ws">未审</span>
@@ -47,9 +47,8 @@
                                 <p>入住时间 2017-05-19</p>
                             </div>
                             <div class="audit-details" style="display: block;"><!-- 默认隐藏，点击'.order-info'展开 -->
-                                <div class="audit-button"><!-- 已入住，里面只有两个按钮添加 '.button-two' -->
+                                <div class="audit-button button-two"><!-- 已入住，里面只有两个按钮添加 '.button-two' -->
                                     <a href="javascript:;" class="weui-btn">未到</a>
-                                    <a href="javascript:;" class="weui-btn">已入住</a>
                                     <a href="javascript:;" class="weui-btn weui-btn_submit">已离店</a>
                                 </div>
 
@@ -57,43 +56,13 @@
                                 <div class="weui-cells" style="display: none;"></div>
                                 <!-- 已确认-未到 end -->
 
-                                <!-- 已确认-已入住 -->
-                                <div class="weui-cells" style="display: none;">
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd"><label class="weui-label">客人姓名</label></div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="小月月">
-                                            <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd">
-                                            <label class="weui-label">确认号</label>
-                                        </div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="请填写确认号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd">
-                                            <label class="weui-label">房间号</label>
-                                        </div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="(必填)请填写房间号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 已确认-已入住 end -->
 
                                 <!-- 已确认-已离店 -->
                                 <div class="weui-cells" style="display: block;">
                                     <div class="weui-cell">
                                         <div class="weui-cell__hd"><label class="weui-label">客人姓名</label></div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="小月月">
-                                            <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="小月月">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -101,8 +70,7 @@
                                             <label class="weui-label">确认号</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="请填写确认号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="12345678">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -110,8 +78,7 @@
                                             <label class="weui-label">房间号</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="(必填)请填写房间号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="110">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -119,9 +86,24 @@
                                             <label class="weui-label">离店日期</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="date" value="" placeholder="(必填)请选择离店日期">
+                                            <input class="weui-input" type="text" value="2017-05-20">
                                         </div>
-                                        <i class="icon-date"></i>
+                                    </div>
+                                    <div class="weui-cell">
+                                        <div class="weui-cell__hd">
+                                            <label class="weui-label">杂费金额</label>
+                                        </div>
+                                        <div class="weui-cell__bd">
+                                            <input class="weui-input" type="text" value="60">
+                                        </div>
+                                    </div>
+                                    <div class="weui-cell">
+                                        <div class="weui-cell__hd">
+                                            <label class="weui-label">杂费备注</label>
+                                        </div>
+                                        <div class="weui-cell__bd">
+                                            <input class="weui-input" type="text" value="电费">
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- 已确认-已离店 end -->
@@ -131,7 +113,6 @@
                         <!-- 订单列表 end -->
                         <!-- 订单列表 -->
                         <div class="order-item">
-                            <i class="icon-msg"></i>
                             <div class="order-info">
                                 <p class="order-type">
                                     <span class="icon ws">未审</span>
@@ -147,9 +128,8 @@
                                 <p>入住时间 2017-05-19</p>
                             </div>
                             <div class="audit-details" style="display: none;"><!-- 默认隐藏，点击'.order-info'展开 -->
-                                <div class="audit-button"><!-- 已入住，里面只有两个按钮添加 '.button-two' -->
+                                <div class="audit-button button-two"><!-- 已入住，里面只有两个按钮添加 '.button-two' -->
                                     <a href="javascript:;" class="weui-btn">未到</a>
-                                    <a href="javascript:;" class="weui-btn">已入住</a>
                                     <a href="javascript:;" class="weui-btn weui-btn_submit">已离店</a>
                                 </div>
 
@@ -157,43 +137,12 @@
                                 <div class="weui-cells" style="display: none;"></div>
                                 <!-- 已确认-未到 end -->
 
-                                <!-- 已确认-已入住 -->
-                                <div class="weui-cells" style="display: none;">
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd"><label class="weui-label">客人姓名</label></div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="小月月">
-                                            <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd">
-                                            <label class="weui-label">确认号</label>
-                                        </div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="请填写确认号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd">
-                                            <label class="weui-label">房间号</label>
-                                        </div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="(必填)请填写房间号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 已确认-已入住 end -->
-
                                 <!-- 已确认-已离店 -->
                                 <div class="weui-cells" style="display: block;">
                                     <div class="weui-cell">
                                         <div class="weui-cell__hd"><label class="weui-label">客人姓名</label></div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="小月月">
-                                            <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="小月月">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -201,8 +150,7 @@
                                             <label class="weui-label">确认号</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="请填写确认号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="12345678">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -210,8 +158,7 @@
                                             <label class="weui-label">房间号</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="(必填)请填写房间号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="110">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -219,9 +166,24 @@
                                             <label class="weui-label">离店日期</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="date" value="" placeholder="(必填)请选择离店日期">
+                                            <input class="weui-input" type="text" value="2017-05-20">
                                         </div>
-                                        <i class="icon-date"></i>
+                                    </div>
+                                    <div class="weui-cell">
+                                        <div class="weui-cell__hd">
+                                            <label class="weui-label">杂费金额</label>
+                                        </div>
+                                        <div class="weui-cell__bd">
+                                            <input class="weui-input" type="text" value="60">
+                                        </div>
+                                    </div>
+                                    <div class="weui-cell">
+                                        <div class="weui-cell__hd">
+                                            <label class="weui-label">杂费备注</label>
+                                        </div>
+                                        <div class="weui-cell__bd">
+                                            <input class="weui-input" type="text" value="电费">
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- 已确认-已离店 end -->
@@ -237,7 +199,6 @@
                         <div class="hotel-tit">API测试</div><!-- 集团酒店名称，没有不显示 -->
                         <!-- 订单列表 -->
                         <div class="order-item">
-                            <i class="icon-msg"></i>
                             <div class="order-info">
                                 <p class="order-type">
                                     <span class="icon ws">未审</span>
@@ -253,9 +214,8 @@
                                 <p>入住时间 2017-05-19</p>
                             </div>
                             <div class="audit-details" style="display: none;"><!-- 默认隐藏，点击'.order-info'展开 -->
-                                <div class="audit-button"><!-- 已入住，里面只有两个按钮添加 '.button-two' -->
+                                <div class="audit-button button-two"><!-- 已入住，里面只有两个按钮添加 '.button-two' -->
                                     <a href="javascript:;" class="weui-btn">未到</a>
-                                    <a href="javascript:;" class="weui-btn">已入住</a>
                                     <a href="javascript:;" class="weui-btn weui-btn_submit">已离店</a>
                                 </div>
 
@@ -263,43 +223,12 @@
                                 <div class="weui-cells" style="display: none;"></div>
                                 <!-- 已确认-未到 end -->
 
-                                <!-- 已确认-已入住 -->
-                                <div class="weui-cells" style="display: none;">
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd"><label class="weui-label">客人姓名</label></div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="小月月">
-                                            <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd">
-                                            <label class="weui-label">确认号</label>
-                                        </div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="请填写确认号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                    <div class="weui-cell">
-                                        <div class="weui-cell__hd">
-                                            <label class="weui-label">房间号</label>
-                                        </div>
-                                        <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="(必填)请填写房间号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 已确认-已入住 end -->
-
                                 <!-- 已确认-已离店 -->
                                 <div class="weui-cells" style="display: block;">
                                     <div class="weui-cell">
                                         <div class="weui-cell__hd"><label class="weui-label">客人姓名</label></div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="小月月">
-                                            <a class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="小月月">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -307,8 +236,7 @@
                                             <label class="weui-label">确认号</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="请填写确认号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="12345678">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -316,8 +244,7 @@
                                             <label class="weui-label">房间号</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="text" placeholder="(必填)请填写房间号">
-                                            <a style="display: none" class="btn-clear" href="javascript:void"><img src="../images/Iconchacha.png"></a>
+                                            <input class="weui-input" type="text" value="110">
                                         </div>
                                     </div>
                                     <div class="weui-cell">
@@ -325,9 +252,24 @@
                                             <label class="weui-label">离店日期</label>
                                         </div>
                                         <div class="weui-cell__bd">
-                                            <input class="weui-input" type="date" value="" placeholder="(必填)请选择离店日期">
+                                            <input class="weui-input" type="text" value="2017-05-20">
                                         </div>
-                                        <i class="icon-date"></i>
+                                    </div>
+                                    <div class="weui-cell">
+                                        <div class="weui-cell__hd">
+                                            <label class="weui-label">杂费金额</label>
+                                        </div>
+                                        <div class="weui-cell__bd">
+                                            <input class="weui-input" type="text" value="60">
+                                        </div>
+                                    </div>
+                                    <div class="weui-cell">
+                                        <div class="weui-cell__hd">
+                                            <label class="weui-label">杂费备注</label>
+                                        </div>
+                                        <div class="weui-cell__bd">
+                                            <input class="weui-input" type="text" value="电费">
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- 已确认-已离店 end -->
