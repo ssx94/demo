@@ -60,6 +60,7 @@
 	.l-section {
 		width: 100%;
 		position: relative;
+		overflow: hidden;
 	}
 	.m-checklists-hd {
 		padding: 5px 0;
@@ -82,8 +83,9 @@
 		padding: 10px 0;
 		line-height: 20px;
 		min-height: 40px;
-		text-align: right;
+		text-align: left;
 		position: relative;
+		overflow: hidden;
 	}
 	.m-checklists-item-hd {
 		padding-left: 10px;
@@ -91,8 +93,9 @@
 		color: #888;
 		float: left;
 		margin-right: 25px;
-		min-width: 85px;
-		text-align: left;
+		width: 110px;
+		word-wrap: break-word;
+    word-break: break-all;
 	}
 	.m-checklists-item-ct {
 		padding-right: 10px;
@@ -209,134 +212,103 @@
   </style>
 </head>
 <body>
-<div class="l-section">
+<div class="l-section basicInfo">
   <ul class="m-checklists">
     <li class="m-checklists-item">
-      <div class="m-checklists-item-hd"> 开始时间：</div>
-      <div class="m-checklists-item-ct"> 2017-06-06 16:57:17</div>
+      <div class="m-checklists-item-hd">开始日期：</div>
+      <div class="m-checklists-item-ct">2017-05-24</div></li>
+    <li class="m-checklists-item">
+      <div class="m-checklists-item-hd">结束日期：</div>
+      <div class="m-checklists-item-ct">2017-05-26</div></li>
+    <li class="m-checklists-item">
+      <div class="m-checklists-item-hd">酒店名称：</div>
+      <div class="m-checklists-item-ct">
+        <a href="/customer/queryCustomerDetail.htm?customerNum=CH01313516" target="_blank">漳州吉祥宾馆</a>
+        <span class="weak"></span>
+      </div>
     </li>
     <li class="m-checklists-item">
-      <div class="m-checklists-item-hd"> 结束时间：</div>
-      <div class="m-checklists-item-ct"> 2017-06-08 23:59:59</div>
-    </li>
+      <div class="m-checklists-item-hd">商家电话：</div>
+      <div class="m-checklists-item-ct">0596-2882858</div></li>
+    <li class="m-checklists-item">
+      <div class="m-checklists-item-hd">商家联系人电话：</div>
+      <div class="m-checklists-item-ct">（曾老板）</div></li>
   </ul>
-  <div class="hr margin-t10">
+  <div class="hr margin-t10"></div>
+</div>
+<div class="l-section">
+  <div class="m-checklists-hd">
+    <h4 class="title">任务内容</h4></div>
+  <div class="m-checklists-bd">
+    <ul class="m-checklists">
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">操作人：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">mvwgfjc2294</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">操作类型：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">解绑</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">操作时间：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">2017-05-24 14:42:56</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">售卖规则名称：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">不含早（现付）</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">业务类型：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">普通业务</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">支付类型：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">现付</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">早餐信息：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">0</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">预定生效规则：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">每天06:00到次日06:00可预订。</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">已绑定房型：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">标准双人间,标准单人间,标准三人间,单人大床间</span></div>
+      </li>
+      <li class="m-checklists-item">
+        <div class="m-checklists-item-hd">解绑房型：</div>
+        <div class="m-checklists-item-ct">
+          <span class="bold">单人大床间</span></div>
+      </li>
+      <li class="m-checklists-item m-checklists-table">
+        <div class="m-checklists-item-hd">担保规则：</div>
+        <div class="m-sgrid">
+          <table class="m-sgrid-inner">
+            <tbody>
+              <tr>
+                <td class="m-sgrid-td">在店时间从2016-09-30至2016-10-05。有效星期1/2/3/4/5/6/7。首晚担保。入住时间超过18:00:00需要担保。不可变更取消。</td></tr>
+              <tr>
+                <td class="m-sgrid-td">在店时间从2017-01-27至2017-02-01。有效星期1/2/3/4/5/6/7。首晚担保。入住时间超过18:00:00需要担保。不可变更取消。</td></tr>
+              <tr>
+                <td class="m-sgrid-td">在店时间从2017-04-01至2017-04-03。有效星期1/2/3/4/5/6/7。首晚担保。入住时间超过18:00:00需要担保。不可变更取消。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 
-<div class="l-section">
-  <div class="m-checklists-hd"><h4 class="title"> 任务内容 </h4></div>
-  <div class="m-checklists-bd">
-		<ul class="m-checklists">
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 酒店名称：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;
-			"><span class="bold"> <a href="#">标准间-批量测房态((我是自定义2))新建测试酒店 </a></span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> m酒店id：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 90037517 </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> s酒店id：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 90037517 </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 供应商名称：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> eLong </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 酒店联系方式：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> <a href="#">13817648652</a> 杨月董事长</span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 酒店联系人信息：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold">  </span></div>
-			</li>
-			<li class="m-checklists-item m-checklists-table">
-				<div class="m-checklists-item-hd"> 价格列表：<br/></div>
-				<div class="m-sgrid">
-				  <table class="m-sgrid-inner">
-			      <tbody>
-				      <tr>
-			          <td class="m-sgrid-th"> 产品名称</td>
-			          <td class="m-sgrid-th"> 币种</td>
-			          <td class="m-sgrid-th"> 底价</td>
-			          <td class="m-sgrid-th"> 卖价</td>
-			          <td class="m-sgrid-th"> 佣金额</td>
-			          <td class="m-sgrid-th"> 佣金率</td>
-			          <td class="m-sgrid-th"> 变价原因</td>
-			          <td class="m-sgrid-th"> 加床价</td>
-			          <td class="m-sgrid-th"> 保底</td>
-			          <td class="m-sgrid-th"> 封顶</td>
-				      </tr>
-				      <tr>
-			          <td class="m-sgrid-td"> 标准间-批量测房态(((周末促销)))</td>
-			          <td class="m-sgrid-td"> RMB</td>
-			          <td class="m-sgrid-td"> 200</td>
-			          <td class="m-sgrid-td"> 300</td>
-			          <td class="m-sgrid-td"> 100.00</td>
-			          <td class="m-sgrid-td"> 33.33%</td>
-			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
-			          <td class="m-sgrid-td"> 22.22</td>
-			          <td class="m-sgrid-td"> 100</td>
-			          <td class="m-sgrid-td"> 200</td>
-				      </tr>
-				      <tr>
-			          <td class="m-sgrid-td"> 标准间-1(((周末促销)))</td>
-			          <td class="m-sgrid-td"> RMB</td>
-			          <td class="m-sgrid-td"> 50.43</td>
-			          <td class="m-sgrid-td"> 100.65</td>
-			          <td class="m-sgrid-td"> 50.22</td>
-			          <td class="m-sgrid-td"> 49.90%</td>
-			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
-			          <td class="m-sgrid-td"></td>
-			          <td class="m-sgrid-td"></td>
-			          <td class="m-sgrid-td"></td>
-				      </tr>
-				      <tr>
-			          <td class="m-sgrid-td"> 标准间-批量测房态((我是自定义2))</td>
-			          <td class="m-sgrid-td"> RMB</td>
-			          <td class="m-sgrid-td"> 382.7</td>
-			          <td class="m-sgrid-td"> 420</td>
-			          <td class="m-sgrid-td"> 37.30</td>
-			          <td class="m-sgrid-td"> 8.88%</td>
-			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
-			          <td class="m-sgrid-td"></td>
-			          <td class="m-sgrid-td"> 20</td>
-			          <td class="m-sgrid-td"></td>
-				      </tr>
-			      </tbody>
-				  </table>
-				</div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 周有效：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 周六、周日 </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 价格有效期起始时间：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 2017-06-04 </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 价格有效期截止时间：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 2017-06-04 </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 发起人：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 孔程程 </span></div>
-			</li>
-			<li class="m-checklists-item">
-				<div class="m-checklists-item-hd"> 发起时间：</div>
-				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 2017-06-01 09:41:08 </span></div>
-			</li>
-		</ul>
-  </div>
-  <div class="m-checklists-ft">
-    <div class="bd">
-    	<div class="content"><a href="javascript:window.open('javascript:window.name;', '<script>window.location.replace(\'$!{url.value}\')</script>')">www.dingdan.com(链接内容请在PC端查看)</a></div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
