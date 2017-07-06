@@ -73,7 +73,7 @@
 		font-weight: normal;
 	}
 	.m-checklists-bd {
-
+		
 	}
 	.m-checklists {
 		background: #fff;
@@ -128,7 +128,7 @@
 		-webkit-overflow-scrolling: touch;
 	}
 	.m-sgrid-inner {
-		-white-space: nowrap;
+		/* white-space: nowrap; */
 		border-bottom: 1px solid #EDEDEE;
 		width: 100%;
 		border-spacing: 0;
@@ -145,15 +145,13 @@
 	.m-checklists-table th, .m-checklists-table .m-sgrid-th {
 		border-left: 1px solid #EDEDEE;
 		border-top: 1px solid #EDEDEE;
-		line-height: 20px;
 		padding: 10px;
 		color: #7E9CB4;
-		min-width: 50%;
+		min-width: 100px;
 	}
 	.m-checklists-table td, .m-checklists-table .m-sgrid-td {
 		border-left: 1px solid #EDEDEE;
 		border-top: 1px solid #EDEDEE;
-		line-height: 20px;
 		padding: 10px;
 		min-width: 100px;
 	}
@@ -255,20 +253,63 @@
 				<div class="m-checklists-item-hd"> 酒店联系人信息：</div>
 				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold">  </span></div>
 			</li>
-			<li class="m-checklists-item m-checklists-table">               <div class="m-checklists-item-hd"> 担保规则： </div>                <div class="m-sgrid">
-			<table class="m-sgrid-inner">
-				<tbody>
-					<tr>
-						<td class="m-sgrid-td"> 在店时间从2016-09-30至2016-10-05。有效星期1/2/3/4/5/6/7。首晚担保。入住时间超过18:00:00需要担保。不可变更取消。 </td>
-					</tr>
-					<tr>
-						<td class="m-sgrid-td"> 在店时间从2017-01-27至2017-02-01。有效星期1/2/3/4/5/6/7。首晚担保。入住时间超过18:00:00需要担保。不可变更取消。 </td>
-					</tr>
-					<tr>
-						<td class="m-sgrid-td"> 在店时间从2017-04-01至2017-04-03。有效星期1/2/3/4/5/6/7。首晚担保。入住时间超过18:00:00需要担保。不可变更取消。 </td>
-					</tr>
-				</tbody>
-			</table>                </div>           </li>
+			<li class="m-checklists-item m-checklists-table">
+				<div class="m-checklists-item-hd"> 价格列表：<br/></div>
+				<div class="m-sgrid">
+				  <table class="m-sgrid-inner">
+			      <tbody>
+				      <tr>
+			          <td class="m-sgrid-th"> 产品名称</td>
+			          <td class="m-sgrid-th"> 币种</td>
+			          <td class="m-sgrid-th"> 底价</td>
+			          <td class="m-sgrid-th"> 卖价</td>
+			          <td class="m-sgrid-th"> 佣金额</td>
+			          <td class="m-sgrid-th"> 佣金率</td>
+			          <td class="m-sgrid-th"> 变价原因</td>
+			          <td class="m-sgrid-th"> 加床价</td>
+			          <td class="m-sgrid-th"> 保底</td>
+			          <td class="m-sgrid-th"> 封顶</td>
+				      </tr>
+				      <tr>
+			          <td class="m-sgrid-td"> 标准间-批量测房态(((周末促销)))</td>
+			          <td class="m-sgrid-td"> RMB</td>
+			          <td class="m-sgrid-td"> 200</td>
+			          <td class="m-sgrid-td"> 300</td>
+			          <td class="m-sgrid-td"> 100.00</td>
+			          <td class="m-sgrid-td"> 33.33%</td>
+			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
+			          <td class="m-sgrid-td"> 22.22</td>
+			          <td class="m-sgrid-td"> 100</td>
+			          <td class="m-sgrid-td"> 200</td>
+				      </tr>
+				      <tr>
+			          <td class="m-sgrid-td"> 标准间-1(((周末促销)))</td>
+			          <td class="m-sgrid-td"> RMB</td>
+			          <td class="m-sgrid-td"> 50.43</td>
+			          <td class="m-sgrid-td"> 100.65</td>
+			          <td class="m-sgrid-td"> 50.22</td>
+			          <td class="m-sgrid-td"> 49.90%</td>
+			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
+			          <td class="m-sgrid-td"></td>
+			          <td class="m-sgrid-td"></td>
+			          <td class="m-sgrid-td"></td>
+				      </tr>
+				      <tr>
+			          <td class="m-sgrid-td"> 标准间-批量测房态((我是自定义2))</td>
+			          <td class="m-sgrid-td"> RMB</td>
+			          <td class="m-sgrid-td"> 382.7</td>
+			          <td class="m-sgrid-td"> 420</td>
+			          <td class="m-sgrid-td"> 37.30</td>
+			          <td class="m-sgrid-td"> 8.88%</td>
+			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
+			          <td class="m-sgrid-td"></td>
+			          <td class="m-sgrid-td"> 20</td>
+			          <td class="m-sgrid-td"></td>
+				      </tr>
+			      </tbody>
+				  </table>
+				</div>
+			</li>
 			<li class="m-checklists-item">
 				<div class="m-checklists-item-hd"> 周有效：</div>
 				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 周六、周日 </span></div>
@@ -297,8 +338,5 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-	alert(document.offsetHeight)
-</script>
 </body>
 </html>
