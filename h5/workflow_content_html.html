@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <title>workflow</title>
+  <style type="text/css">
+	/* 重置 */
+	html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	body {
+		line-height: 1;
+	}
+	:focus {
+		outline: 1;
+	}
+	article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+		display: block;
+	}
+	nav ul {
+		list-style: none;
+	}
+	li {
+		list-style-type: none;
+	}
+	a {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+		text-decoration: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	/* 页面内容 */
+	body {
+		color: #333;
+		background: #F2F3F8;
+	}
+	a {
+		color: #5195e3;
+	}
+	.l-section {
+		width: 100%;
+		position: relative;
+	}
+	.m-checklists-hd {
+		padding: 5px 0;
+	}
+	.title {
+		padding-left: 10px;
+		padding-right: 10px;
+		color: #888;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: normal;
+	}
+	.m-checklists-bd {
+		
+	}
+	.m-checklists {
+		background: #fff;
+	}
+	.m-checklists-item {
+		padding: 10px 0;
+		line-height: 20px;
+		min-height: 40px;
+		text-align: right;
+		position: relative;
+	}
+	.m-checklists-item-hd {
+		padding-left: 10px;
+		font-size: 14px;
+		color: #888;
+		float: left;
+		margin-right: 25px;
+		min-width: 85px;
+		text-align: left;
+	}
+	.m-checklists-item-ct {
+		padding-right: 10px;
+		overflow: hidden;
+		word-break: normal;
+		word-wrap: break-word;
+		font-size: 15px;
+		color: #333;
+	}
+	.bold {
+		/* font-weight: bold; */
+	}
+	.m-checklists-item.m-checklists-table {
+		background: #F2F3F8;
+		line-height: 0;
+	}
+	.m-checklists-table .m-checklists-item-hd {
+		padding: 5px 0 5px 10px;
+		line-height: 20px;
+		color: #888;
+		font-size: 14px;
+		width: 100%;
+		float: none;
+		clear: both;
+		overflow: hidden;
+	}
+	.m-sgrid {
+		background: #FFF;
+		width: 100%;
+		overflow-y: hidden;
+		overflow-x: auto;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		-webkit-overflow-scrolling: touch;
+	}
+	.m-sgrid-inner {
+		/* white-space: nowrap; */
+		border-bottom: 1px solid #EDEDEE;
+		width: 100%;
+		border-spacing: 0;
+		border-collapse: separate;
+		max-width: 100%;
+		background-color: transparent;
+		empty-cells: show;
+		box-sizing: border-box;
+		display: table;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: left;
+	}
+	.m-checklists-table th, .m-checklists-table .m-sgrid-th {
+		border-left: 1px solid #EDEDEE;
+		border-top: 1px solid #EDEDEE;
+		padding: 10px;
+		color: #7E9CB4;
+		min-width: 100px;
+	}
+	.m-checklists-table td, .m-checklists-table .m-sgrid-td {
+		border-left: 1px solid #EDEDEE;
+		border-top: 1px solid #EDEDEE;
+		padding: 10px;
+		min-width: 100px;
+	}
+	.m-checklists-ft {
+		background: #FFF;
+	}
+	.m-checklists-ft .bd {
+		position: relative;
+	}
+	.m-checklists-ft .bd .content {
+		padding: 10px;
+		line-height: 20px;
+		color: #333;
+		font-size: 14px;
+		position: relative;
+	}
+	.hr {
+		box-sizing: content-box;
+		height: 0;
+		overflow: visible;
+	}
+	.margin-t10 {
+		margin-top: 10px;
+	}
+	.m-checklists-item:before, .m-checklists-ft .bd .content:before {
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		height: 1px;
+		border-top: 1px solid #EDEDEE;
+		color: #EDEDEE;
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+		-webkit-transform: scaleY(0.5);
+		transform: scaleY(0.5);
+		z-index: 2;
+	}
+	.m-checklists:after, .m-checklists-ft .bd:after {
+		content: " ";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 1px;
+		border-bottom: 1px solid #EDEDEE;
+		color: #EDEDEE;
+		-webkit-transform-origin: 0 100%;
+		transform-origin: 0 100%;
+		-webkit-transform: scaleY(0.5);
+		transform: scaleY(0.5);
+		z-index: 2;
+	}
+  </style>
+</head>
+<body>
+<div class="l-section">
+  <ul class="m-checklists">
+    <li class="m-checklists-item">
+      <div class="m-checklists-item-hd"> 开始时间：</div>
+      <div class="m-checklists-item-ct"> 2017-06-06 16:57:17</div>
+    </li>
+    <li class="m-checklists-item">
+      <div class="m-checklists-item-hd"> 结束时间：</div>
+      <div class="m-checklists-item-ct"> 2017-06-08 23:59:59</div>
+    </li>
+  </ul>
+  <div class="hr margin-t10">
+  </div>
+</div>
+
+<div class="l-section">
+  <div class="m-checklists-hd"><h4 class="title"> 任务内容 </h4></div>
+  <div class="m-checklists-bd">
+		<ul class="m-checklists">
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 酒店名称：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;
+			"><span class="bold"> <a href="#">标准间-批量测房态((我是自定义2))新建测试酒店 </a></span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> m酒店id：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 90037517 </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> s酒店id：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 90037517 </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 供应商名称：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> eLong </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 酒店联系方式：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> <a href="#">13817648652</a> 杨月董事长</span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 酒店联系人信息：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold">  </span></div>
+			</li>
+			<li class="m-checklists-item m-checklists-table">
+				<div class="m-checklists-item-hd"> 价格列表：<br/></div>
+				<div class="m-sgrid">
+				  <table class="m-sgrid-inner">
+			      <tbody>
+				      <tr>
+			          <td class="m-sgrid-th"> 产品名称</td>
+			          <td class="m-sgrid-th"> 币种</td>
+			          <td class="m-sgrid-th"> 底价</td>
+			          <td class="m-sgrid-th"> 卖价</td>
+			          <td class="m-sgrid-th"> 佣金额</td>
+			          <td class="m-sgrid-th"> 佣金率</td>
+			          <td class="m-sgrid-th"> 变价原因</td>
+			          <td class="m-sgrid-th"> 加床价</td>
+			          <td class="m-sgrid-th"> 保底</td>
+			          <td class="m-sgrid-th"> 封顶</td>
+				      </tr>
+				      <tr>
+			          <td class="m-sgrid-td"> 标准间-批量测房态(((周末促销)))</td>
+			          <td class="m-sgrid-td"> RMB</td>
+			          <td class="m-sgrid-td"> 200</td>
+			          <td class="m-sgrid-td"> 300</td>
+			          <td class="m-sgrid-td"> 100.00</td>
+			          <td class="m-sgrid-td"> 33.33%</td>
+			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
+			          <td class="m-sgrid-td"> 22.22</td>
+			          <td class="m-sgrid-td"> 100</td>
+			          <td class="m-sgrid-td"> 200</td>
+				      </tr>
+				      <tr>
+			          <td class="m-sgrid-td"> 标准间-1(((周末促销)))</td>
+			          <td class="m-sgrid-td"> RMB</td>
+			          <td class="m-sgrid-td"> 50.43</td>
+			          <td class="m-sgrid-td"> 100.65</td>
+			          <td class="m-sgrid-td"> 50.22</td>
+			          <td class="m-sgrid-td"> 49.90%</td>
+			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
+			          <td class="m-sgrid-td"></td>
+			          <td class="m-sgrid-td"></td>
+			          <td class="m-sgrid-td"></td>
+				      </tr>
+				      <tr>
+			          <td class="m-sgrid-td"> 标准间-批量测房态((我是自定义2))</td>
+			          <td class="m-sgrid-td"> RMB</td>
+			          <td class="m-sgrid-td"> 382.7</td>
+			          <td class="m-sgrid-td"> 420</td>
+			          <td class="m-sgrid-td"> 37.30</td>
+			          <td class="m-sgrid-td"> 8.88%</td>
+			          <td class="m-sgrid-td"> 不符合EB规则:EB规则验证强制进人工</td>
+			          <td class="m-sgrid-td"></td>
+			          <td class="m-sgrid-td"> 20</td>
+			          <td class="m-sgrid-td"></td>
+				      </tr>
+			      </tbody>
+				  </table>
+				</div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 周有效：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 周六、周日 </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 价格有效期起始时间：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 2017-06-04 </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 价格有效期截止时间：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 2017-06-04 </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 发起人：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 孔程程 </span></div>
+			</li>
+			<li class="m-checklists-item">
+				<div class="m-checklists-item-hd"> 发起时间：</div>
+				<div class="m-checklists-item-ct" style="vertical-align: top;"><span class="bold"> 2017-06-01 09:41:08 </span></div>
+			</li>
+		</ul>
+  </div>
+  <div class="m-checklists-ft">
+    <div class="bd">
+    	<div class="content"><a href="javascript:window.open('javascript:window.name;', '<script>window.location.replace(\'$!{url.value}\')</script>')">www.dingdan.com(链接内容请在PC端查看)</a></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
