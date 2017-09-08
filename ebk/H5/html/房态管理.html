@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>房态管理</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+</head>
+<body>
+
+<div class="page room-status">
+    <div class="page__bd">
+        <div class="date-box">
+            <div class="date-list">
+                <!--
+                滚动设置：
+                li的宽度 = 屏幕宽度 * 80% / 6
+                ul的宽度 = li宽度 * li数量，
+                ul的left = li的倍数
+                -->
+                <ul class="date-roll" style="width: 420px; left: -84px;">
+                    <li style="width: 42px;"><span>周一</span><span class="day">12</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周二</span><span class="day">13</span><span>17/05</span></li>
+                    <li class="active" style="width: 42px;"><span>周三</span><span class="day">14</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周四</span><span class="day">15</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周五</span><span class="day">16</span><span>17/05</span></lili>
+                    <li style="width: 42px;"><span>周六</span><span class="day">16</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周六</span><span class="day">16</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周六</span><span class="day">16</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周六</span><span class="day">16</span><span>17/05</span></li>
+                    <li style="width: 42px;"><span>周六</span><span class="day">16</span><span>17/05</span></li>
+                </ul>
+            </div>
+            <a class="option-btn" href="房态管理--选择日期.html"><img src="../images/date.png">选择日期</a>
+        </div>
+        <div class="weui-cells room-type-list">
+            <div class="weui-cell weui-cell_access">
+                <a class="weui-cell__bd" href="房态管理--开关房.html">
+                    <p class="room-type"><span class="name">标准间-大床房-早大床（预付早大床房早大床（预付早床房早大床（预付早（预付早大床房早大床（预付早床房早大床（预付早大床房</span><span class="weui-cell__ft"></span></p>
+                    <p class="sell"><span>已售<em>5</em>间</span></p>
+                </a>
+                <label class="weui-switch-cp">
+                    <input class="weui-switch-cp__input" type="checkbox" checked="checked">
+                    <div class="weui-switch-cp__box"></div>
+                </label>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <a class="weui-cell__bd" href="#">
+                    <p class="room-type"><span class="name">标准间-大床房-早大床（预付预付早大床房</span><span class="weui-cell__ft"></span></p>
+                    <p class="sell"><span>已售<em>5</em>间</span><span>剩余<em>5</em>间</span></p>
+                </a>
+                <label class="weui-switch-cp">
+                    <input class="weui-switch-cp__input" type="checkbox">
+                    <div class="weui-switch-cp__box"></div>
+                </label>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <a class="weui-cell__bd" href="#">
+                    <p class="room-type"><span class="name">标准间-大床房-早大床（预付预付早大床房...</span><span class="weui-cell__ft"></span></p>
+                    <p class="sell"><span>已售<em>5</em>间</span><span><em>无房</em></span></p>
+                </a>
+                <label class="weui-switch-cp">
+                    <input class="weui-switch-cp__input" type="checkbox">
+                    <div class="weui-switch-cp__box"></div>
+                </label>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <a class="weui-cell__bd" href="#">
+                    <p class="room-type"><span class="name">标准间-大床房-早大床</span><span class="weui-cell__ft"></span></p>
+                    <p class="sell"><span>已售<em>5</em>间</span></p>
+                </a>
+                <label class="weui-switch-cp">
+                    <input class="weui-switch-cp__input" type="checkbox">
+                    <div class="weui-switch-cp__box"></div>
+                </label>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <a class="weui-cell__bd" href="#">
+                    <p class="room-type"><span class="name">标准间-大床房-早大床</span><span class="weui-cell__ft"></span></p>
+                    <p class="sell"><span><em>售罄</em></span></p>
+                </a>
+                <label class="weui-switch-cp">
+                    <input class="weui-switch-cp__input" type="checkbox">
+                    <div class="weui-switch-cp__box"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

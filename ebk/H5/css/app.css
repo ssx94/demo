@@ -2,6 +2,11 @@
 .fz12 { font-size: 12px !important; }
 .bg-gray{background: #f4f4f4;}
 img { width: 100%;}
+.pdl3{padding-left:3px;}
+.pdl8{padding-left:8px;}
+.pdl0{padding-left:0px;}
+.cursorP{cursor: pointer;}
+.breakword{word-wrap:break-word}
 /* ###登录页### */
 .logo_hd { width: 67%; margin: 15% auto 2.5%; }
 .logo_hd img { width: 100%; display: block; }
@@ -21,6 +26,9 @@ img { width: 100%;}
 .hd-text { font-size: 14px; padding: 20px 0; text-align: center; }
 .btn-code { font-size: 12px; line-height: 40px; border-radius: 5px; }
 .wrong-text{color:#ff6e33}
+.icon-clear{display:none}
+.mask-bg{ position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0,0,0,.6); width: 100%; height: 100%; z-index:998;}
+
 
 /* ###主页### */
 .hotel-info { padding: 10px 2.7% 0; background-color: #10a6f1; color: #fff; font-size: 14px; line-height: 19px; }
@@ -41,7 +49,7 @@ img { width: 100%;}
 .main .main-nav a span { display: block; }
 .main .gray img { -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: grayscale(100%); filter: gray; }
 .banner img { width: 100%; border-radius: 4px; margin-top: 10px; }
-
+.main .main-nav a .flashlive{width:24px;height:30px;}
 /* ###设置当前酒店### */
 .search-hotel { line-height: 38px; background: #F8F8F8; font-size: 14px; color: #333; padding-left: 10px; }
 .searchbar-result.weui-cells { font-size: 14px; margin-top: 0; color: #666E78; }
@@ -51,7 +59,7 @@ img { width: 100%;}
 .search-bt .search-tips { font-size: 12px; color: #1EABF1; margin-top: 10px; }
 
 /* 订单管理 */
-.weui-navbar__item i { display: inline-block; line-height: 15px; background: #F26161; border-radius: 8px; color: #FFF; font-style: normal; padding: 0 4px; margin-left: 3px; font-size: 12px; }
+.weui-navbar__item i { display: inline-block; line-height: 14px; background: #F26161; border-radius: 8px; color: #FFF; font-style: normal; padding: 0 4px; margin-left: 3px; font-size: 12px; }
 .order-list { font-size: 14px; background-color: #fff; line-height: 1.47058824; position: relative; }
 .order-list .hotel-name { font-size: 12px; color: #999; }
 .order-list .order-item { padding: 10px 15px; position: relative; list-style: none; }
@@ -84,14 +92,15 @@ img { width: 100%;}
 .order-details{ padding-bottom: 50px; overflow: hidden; position: relative;}
 .order-details-title{ color: #666; font-size: 12px; margin: 12px 0 3px; padding: 0 15px;}
 .order-details-item{ background: #FFF; overflow: hidden; position: relative;}
+.order-details-item em{font-style: normal;}
 .order-form{ padding: 10px 15px; font-size: 14px; line-height: 20px; color: #666E78;}
 .order-details-item:after,.order-details-box:after { content: " "; position: absolute; left: 0; bottom: -1px; right: 0; height: 1px; border-top: 1px solid #E2E2E2; color: #E2E2E2; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(.5); transform: scaleY(.5); }
 .order-details-item:before { content: " "; position: absolute; left: 0; top: 0px; right: 0; height: 1px; border-top: 1px solid #E2E2E2; color: #E2E2E2; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(.5); transform: scaleY(.5); }
 .order-form p{ margin: 3px 0;}
 .order-form p.room-total{ color: #22A7F0;}
 .order-form p.room-price{ color: #8A8F95; font-size: 12px; margin: 0;}
-.order-form p.room-price span{ display: inline-block; width: 55px;}
-.order-form .weui-btn{ padding: 0; width: 148px; margin: 5px 0 15px; line-height: 18px; font-size: 12px; float: left; }
+.order-form p.room-price .room-title{ display: inline-block; width: 55px;}
+.order-form .weui-btn{ /* padding: 0; width: 148px; */ margin: 5px 0 15px; line-height: 18px; font-size: 12px; float: left; }
 .order-save-btn{ border-radius: 0; font-size: 18px; padding: 3px 0;}
 .btn-tel{ display: block; width: 20px; height: 20px; float: right;}
 .btn-tel img{ width: 100%;}
@@ -114,22 +123,23 @@ html, body {height: 100%;-webkit-overflow-scrolling: touch;}
 #scroller {position: absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);width: 100%;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);-o-transform: translateZ(0);transform: translateZ(0);
 		   -webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
 		   -webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;-o-text-size-adjust: none;text-size-adjust: none;}
-#pullDown,#pullUp{  height:40px;  line-height:40px;  text-align:center;}
-
+/* .pullscroll{margin: 0.8em auto;} */
+.pullscroll .weui-loading{display:none}
+.loading .weui-loading{display:inline-block}
 /*使用avalon的页面默认隐藏*/
 .ms-controller{visibility: hidden}
 
-.loading{width: 30px; height: 30px; margin: 20px auto;}
+/* 刷新加载图标 */
+/* .loading{width: 30px; height: 30px; margin: 20px auto;}
 .loading i{ display: block; width: 100%; height: 100%; background-size: 100%;}
 .loading i.down{ display: block; width: 100%; height: 100%; background-image: url(../images/circle-arrow-down.png);}
-.loading i.up{ display: block; width: 100%; height: 100%; background-image: url(../images/circle-arrow-up.png);}
+.loading i.up{ display: block; width: 100%; height: 100%; background-image: url(../images/circle-arrow-up.png);} */
 
 /* 输入框默认颜色 */
 ::-webkit-input-placeholder {color: #999;}
 :-moz-placeholder {color: #999;}
 ::-moz-placeholder {color: #999;}
 :-ms-input-placeholder {color: #999;}
-
 
 /* ###订单审核### */
 .audit-order {padding-bottom: 10px;}
@@ -147,13 +157,18 @@ html, body {height: 100%;-webkit-overflow-scrolling: touch;}
 .btn-filtrate .icon-filtrate{ display: block; width: 50px; height: 50px; background: url(../images/shaixuan.png) no-repeat; background-size: 100%;}
 .icon-msg{ display: block; width: 16px; height: 15px; background: url(../images/liuyan.png) no-repeat; background-size: 100%; position: absolute; top: 10px; right: 15px;}
 .audit-order .audit-button{ text-align: center; margin-top: 20px;}
-.audit-order .audit-button .weui-btn{ display: inline-block; width: 26%; margin:0 8px; color: #1EABF1; font-size: 14px; line-height: 24px; border-radius: 18px;}
+.audit-order .audit-button .weui-btn{ display: inline-block; width: 26%; margin:0 8px; color: #666; font-size: 14px; line-height: 24px; border-radius: 18px;}
 .audit-order .audit-button.button-two .weui-btn{ margin:0 10%;}
-.audit-order .audit-button .weui-btn:after{border-radius: 36px; border: 1px solid rgba(30,171,241,1);}
-.audit-order .audit-button .weui-btn_submit { background-image: -webkit-linear-gradient(left,#1eabf1,#3fd5fa); background-image: linear-gradient(90deg,#1eabf1,#3fd5fa); border-radius: 18px; background-color: #1eabf1; color: #fff;}
-.audit-order .audit-button .weui-btn_submit:after{border:0;}
+.audit-order .audit-button .weui-btn:after{border-radius: 36px; border: 1px solid rgba(102,102,102,1);}
+.audit-order .audit-button .weui-btn_submit {color: #1EABF1; background: #fff;}
+.audit-order .audit-button .weui-btn_submit:after{border-color: #666; border: 1px solid rgba(30,171,241,1);}
 .order-btn-save{text-align: center; margin: 20px 0 10px;}
 .order-btn-save a{ width: 100px; height: 26px; line-height: 26px; font-size: 14px;}
+#wrapper.auditOrder{ top: 0;}
+.hotel-tit-warp{display: flex;position: absolute; z-index: 500;top: 0;width: 100%;background-color: #f4f4f4;margin-top:52px;padding-top:1px;}
+.audit-item-box{margin-top:0px}
+.audit-hotel-tit{margin-top:12px;}
+
 /* 订单审核--筛选 */
 .audit-order .weui-cells{ margin-top: 0; line-height: 30px;}
 .audit-order .weui-cells:before{ border-top-width: 0;}
@@ -166,8 +181,166 @@ html, body {height: 100%;-webkit-overflow-scrolling: touch;}
 .audit-order .weui-select{ height: 50px; line-height: 50px; color: #666E78;}
 .audit-order .page__ft{ font-size: 14px;}
 .audit-order .weui-btn-area{ margin: 65px 48px 20px 48px;}
-.audit-order .icon-date{ display: block; width: 22px; height: 20px; position: absolute; right: 15px; background: #fff url(../images/riqi.png) no-repeat; background-size: 100%;}
+.audit-order .icon-date{ display: block;cursor: pointer; width: 22px; height: 20px; position: absolute; right: 15px; background: #fff url(../images/riqi.png) no-repeat; background-size: 100%;}
+/**edit*/
+.filter-wrapper{ display: none; background: #fff; width: 100%; position: absolute; top:0;   bottom: 0; z-index: 1001;}
+.slidRight{ bottom: 0;}
+#filterAudit{width: 100%; overflow: hidden; position: absolute; z-index: 1001; bottom: 0; top: 36px; max-height: 350px; overflow-y: auto;}
+.audit-order .posR, .posR{ position: position: relative;}
+.audit-order .weui-input.hidden-area{ display: inline; position: absolute; top: 0; left: 0; z-index: 10;}
+.filterOpera{position: absolute; bottom: 0; width: 100%; left: 0; z-index: 1001;}
+#filterScroller {position: absolute;-webkit-tap-highlight-color: rgba(0,0,0,0);width: 100%;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);-o-transform: translateZ(0);transform: translateZ(0);}
+.filter-audit2{ width: 100%; background-color: #fff; }
+#filterAudit .weui-check__label { padding-left: 0; }
+.slidUp, .slidUp .filter-audit{top: 0; bottom: ; transition: top .3s ease;}
+.antTop{ transition: top .1s ease;}
+.audit-order .order-list .order-item.spt-bak, .spt-bak{ background: #f5f5f5;}
+.tit-fixed{display: none; height: 25px; padding: 10px 15px; font-size: 14px; color: #333; top:40px;}
+.top-50{ top: -50px;}
+.top0{ top: 0;}
+.order-list .order-item p.houry-tip{ padding-left: 15px; color: #aaa; font-size: 12px; line-height: 14px;}
+.audit-order .audit-button .weui-btn{ background: #fff;}
+.tip-txt{text-align: right; padding: 5px 15px; color: #666}
+.audit-order .fontgrey{color:#929292}
+.audit-order .weui-input:disabled{ -webkit-opacity: 1; color: #000;}
+/**end*/
 
 .weui-msg{ width: 100%; padding: 20px 0; height: 35px; line-height: 35px; position: fixed; bottom: 0; background: #fff; z-index: 1001; text-align: center;}
 .weui-msg a{ display: inline-block; font-size: 14px; color: #0EA4F1;}
 .weui-msg input{ display: inline-block; width: 70%; padding: 5px 10px; height: 25px; line-height: 25px; margin: 0 5px; position: relative; border: 1px solid rgba(201,201,203,1); border-radius: 18px;}
+
+/*错误提示弹窗*/
+.new-fail-toast {position: fixed;z-index: 5000;/*left: 50%;*/background: rgba(17, 17, 17, 0.7);text-align: center;border-radius: 5px;color: #FFFFFF;bottom:80px;}
+.new-fail-toast p{margin:0px; padding:10px;}
+
+/*为兼容ios设备上点击事件的元素添加属性*/
+.weui-navbar__item,.weui-search-bar,.weui-btn,.weui-cell__bd,.weui-input,a{cursor: pointer;}
+
+/* ###房态管理### */
+.room-status .weui-cells{ margin-top: 0; font-size: 12px; line-height: 1.5;}
+.room-status .weui-cells:after{ left: 15px;}
+.date-box{ background: #f9f9f9; margin: 1px 2px; overflow: hidden;}
+.date-box a{ display: block; color: #949494; font-size: 12px; }
+.date-box .option-btn{ width: 20%; float: right; color: #666; text-align: center; line-height: 25px; margin-top: 5px; padding-top: 9px; position: relative;}
+.date-box .option-btn img{ display: block; margin: 0 auto; width: 20px; height: 21px;}
+.date-box a.option-btn:after {	content: " ";	position: absolute;	left: 0; top: 0; width: 1px; bottom: 0;	border-right: 1px solid #d8d8d8; color: #d8d8d8; -webkit-transform-origin: 100% 0; transform-origin: 100% 0;	-webkit-transform: scaleX(0.5);	transform: scaleX(0.5);}
+.date-box .date-list { width: 80%; float: left; position: relative; height: 66px; overflow: hidden;}
+.date-box .date-list .date-roll { position: absolute; left: 0; top: 0; height: 66px; overflow: hidden;}
+.date-box .date-list li{ display: inline-block; float: left; min-width: 42px; padding: 5px 0; font-size: 12px; text-align: center; line-height: 18px; position: relative;}
+.date-box .date-list li span{ display: block;}
+.date-box .date-list li .day{ color: #666; font-size: 15px; font-weight: bold; line-height: 20px;}
+.date-box .date-list li.active,.date-box .date-list li.active .day{ color: #0ea4f1;}
+.date-box .date-list li:after{ content: " "; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background-color: #0ea4f1; z-index: 2; display: none;}
+.date-box .date-list li.active:after{ display: block;}
+
+.room-type-list .room-type{ height: 22px; line-height: 22px; font-size: 14px; color: #333; }
+.room-type-list .room-type .name{ display: block; float: left; margin-right: 5px; width: 190px; text-overflow:ellipsis; white-space:nowrap; overflow: hidden;}
+.room-type-list .sell{ line-height: 18px; color: #949494;}
+.room-type-list .sell em{ color: #0EA4F1; font-style: normal;}
+.room-type-list .sell span{ margin-left: 10px; padding-left: 10px; position: relative;}
+.room-type-list .sell span:first-child{ margin-left: 0; padding-left: 0; border-left: 0;}
+.room-type-list .sell span:after {	content: " ";	position: absolute;	left: -1px; top: 3px; width: 1px; bottom: 3px;	border-right: 1px solid #d8d8d8; color: #d8d8d8; -webkit-transform-origin: 100% 0; transform-origin: 100% 0;	-webkit-transform: scaleX(0.5);	transform: scaleX(0.5);}
+.room-type-list .sell span:first-child:after{ display: none;}
+
+.weui-cell_switch, .weui-switch-cp{ padding: 0; margin: 0; height: 16px; line-height: 16px; position: absolute; right: 15px; -top: 15px;}
+.weui-switch, .weui-switch-cp__box { position: relative; width: 62px; height: 16px; line-height: 16px; border: 0px; background: #c6c6c6; outline: 0; border-radius: 8px;}
+.weui-switch-cp__box:before, .weui-switch:before{	content:"未维护";	width: 60px; right: 2px; height: 16px; border-radius: 0; background: none; text-align: right; color: #fff; font-size: 12px;}
+.weui-switch-cp__box:after, .weui-switch:after { top: -4px; width: 24px; height: 24px; border-radius: 100%; background-color: #fff;}
+.weui-switch-cp__input:checked~.weui-switch-cp__box:before, .weui-switch:checked:before { -webkit-transform: scale(1); transform: scale(1); content: "已开"; text-align: left; text-indent: 7px;}
+.weui-switch-cp__input:checked~.weui-switch-cp__box, .weui-switch:checked{border-color: #0ea4f1; background-color: #0ea4f1;}
+.weui-switch-cp__input:checked~.weui-switch-cp__box:after, .weui-switch:checked:after { -webkit-transform: translateX(40px); transform: translateX(40px);}
+/* 开关房 */
+.room-status .bg-gray{ padding-top: 4px;}
+.room-panel{ margin-bottom: 10px; padding: 10px 15px; line-height: 30px; font-size: 14px; color: #333; background: #fff;}
+.room-panel:before{ display: none;}
+.room-panel:after{ border-bottom: 1px solid #cbcbcb;}
+.switch-room .weui-cell{ font-size: 14px; color: #333; line-height: 30px; background: #fff;}
+.switch-room .weui-switch, .switch-room .weui-switch-cp__box { width: 52px;}
+.switch-room .weui-switch-cp__input:checked~.switch-room .weui-switch-cp__box:before, .switch-room .weui-switch:checked:before { text-indent: 4px;}
+.switch-room .weui-switch-cp__box:before, .switch-room .weui-switch:before{ content:"关闭"; width: 50px;}
+.switch-room .weui-switch-cp__input:checked~.switch-room .weui-switch-cp__box:after, .switch-room .weui-switch:checked:after { -webkit-transform: translateX(30px); transform: translateX(30px);}
+.switch-room .error-tips { font-size: 12px; color: #0EA4F1;}
+.add-room-wrap .weui-cell_switch, .add-room-wrap .weui-switch-cp{ top: 17px;}
+.add-room{ margin-top: 10px; padding: 8px 0; line-height: 25px; color: #666; }
+.add-room .weui-btn{ width: 70px; line-height: 25px; font-size: 14px; float: right;}
+.add-room .title{ width: 28%; display: inline-block; float: left;}
+.quantity-wrapper{ display: inline-block; float: left; width: 114px; height: 25px; border-radius: 4px; position: relative;}
+.quantity-wrapper:after{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; border: 1px solid #cbcbcb; border-radius: 4px; -webkit-border-radius: 4px; transform: scale(0.5); -webkit-transform: scale(0.5); transform-origin: top left; -webkit-transform-origin: top left; pointer-events: none;}
+.quantity-wrapper .count{ display: inline-block; float: left; width: 26px; height: 100%; position: relative; font-size: 14px; text-align: center; color: #d8d8d8;}
+.quantity-wrapper .count.jia{ background: url(../images/jia-y.png) no-repeat center; background-size: 14px 14px;}
+.quantity-wrapper .jia.disabled{ background: url(../images/jia-n.png) no-repeat center; background-size: 14px 14px;}
+.quantity-wrapper .count.jian{ background: url(../images/jian-y.png) no-repeat center; background-size: 14px 2px;}
+.quantity-wrapper .jian.disabled{ background: url(../images/jian-n.png) no-repeat center; background-size: 14px 2px;}
+.quantity-wrapper input{ display: inline-block; float: left; width: 62px; height: 100%; -webkit-appearance: none; border: none; text-align: center; vertical-align: top; font-size: 12px; color: #333;}
+.quantity-wrapper .count:after{ position: absolute; top: 0; left: 0; content: ''; width: 1px; height: 25px; border-right: 1px solid #cbcbcb; border-radius: 0; -webkit-border-radius: 0; transform: scaleX(0.5); -webkit-transform: scaleX(0.5); transform-origin: top left; -webkit-transform-origin: top left;}
+.quantity-wrapper .count.jian:after { left: 100%;}
+.switch-room .weui-cell:nth-child(2):before { border-top: 1px dashed #cbcbcb; left: 0px;}
+
+/* 日历 */
+.calendar { width: 100%; padding-top: 30px; padding-bottom: 50px;}
+.calendar li { list-style: none; }
+.calendar-month { position: relative; margin-bottom: 15px;}
+.calendar-title { position: relative; height: 22px; line-height: 22px; padding: 10px 0 8px; font-size: 14px; text-align: center; color: #333;}
+.calendar-title a.title { display: inline-block; color: #333; margin-right: 15px; }
+.calendar-title a.title i{ display: inline-block; width: 6px; height: 4px; margin-left: 4px; vertical-align: middle; background: url(../images/row-b1.png) no-repeat; background-size: cover; }
+.calendar-title .arrow { display: inline-block; width: 22px; height: 22px; background-size: cover; background-repeat: no-repeat; position: absolute; top: 10px;}
+.calendar-title .arrow-prev { left: 15px; background-image: url(../images/rowww-l1.png);}
+.calendar-title .arrow-next { right: 15px; background-image: url(../images/rowww-r1.png);}
+.calendar-title .arrow-prev.disabled { left: 15px; background-image: url(../images/rowww-l2.png);}
+.calendar-title .arrow-next.disabled { right: 15px; background-image: url(../images/rowww-r2.png);}
+/* .calendar-title:after,  */
+.calendar-month:after{ bottom: 0; content: " "; position: absolute; left: 10px; right: 10px; height: 1px; color: #e5e5e5; border-bottom: 1px solid #cbcbcb; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(.5); transform: scaleY(.5);}
+/* .calendar-title:after{ left: 10px; right: 10px;} */
+.calendar-month:nth-last-of-type(1):after{ display: none;}
+.calendar-week { background: #f4f4f4; font-size: 12px; color: #333; width: 93.3%; padding: 0 3.35%; overflow: hidden; position: fixed; top: 0; z-index: 99; }
+.calendar-week .item{ float: left; width: 14.2%; line-height: 28px; text-align: center; }
+.calendar-date {width: 93.3%; padding: 5px 3.35%; overflow: hidden; }
+.calendar-date .item { float: left; width: 14.2%; padding: 10px 0; text-align: center; cursor: pointer; font-size: 14px; color: #C7CED4; font-family: Arial,"Microsoft Yahei","微软雅黑";}
+.calendar-date .item-curMonth { color: #908F8F;}
+.calendar-date .item-curDay{ color: #fff; background-color: #29b8f4;}
+.calendar .weui-btn { position: fixed; bottom: 0; width: 100%; border-radius: 0; height: 44px; line-height: 44px; font-size: 18px;}
+
+/* 结算 */
+.settlement .hd-tips{ padding: 0 15px 0 36px; height: 30px; background: #FFF4E8;}
+.settlement .hd-tips i{ display: block; width: 16px; height: 12px; position: absolute; top: 10px; left: 15px; background: url(../images/icon-volume.png) no-repeat; background-size: cover;}
+.settlement .hd-tips .note{ height: 30px; position: relative; width: 100%; overflow: hidden;}
+.settlement .hd-tips .note p{ height: 30px; line-height: 30px; color: #FFA854; font-size: 12px; white-space: nowrap; position: absolute; top: 0; left: 0;}
+.settlement .tab-btn { text-align: center; height: 24px; margin: 12px 0;}
+.settlement .tab-btn a{ width: 18.4%; line-height: 24px; font-size: 14px; display: inline-block; padding: 0; margin: 0 2.6%; margin-top: 0 !important; }
+.settlement .weui-cell{ padding: 15px; font-size: 14px; color: #666E78; line-height: 20px;}
+.settlement .weui-cells{ margin-top: 0;}
+.settlement .sum{ font-weight: bold;}
+.settlement .cells-list .tr{ text-align: right;}
+.settlement .cells-list span{ display: inline-block; float: left; color: #666E78; box-sizing: border-box;}
+.settlement .cells-list .date{ width: 30%;}
+.settlement .cells-list .sum{ width: 30%;}
+.settlement .cells-list .operate{ width: 40%; text-align: right; font-size: 12px;}
+.settlement .cells-list .operate a{ color: #1EABF1; font-size: 14px;}
+.settlement .cells-list .operate a.keep{ color: #FC5C3F;}
+.settlement .cells-list:after, .settlement .cells-list:before{ left: 15px;}
+.settlement .cells-item{ padding: 20px 15px;}
+.settlement .cells-item .sum{ text-align: center;}
+.settlement .cells-item .tx-btn { margin-top: 14px;}
+.settlement .cells-item .tx-btn a{ width: 27%; line-height: 26px; font-size: 14px; padding: 0;}
+.settlement .pody{ font-size: 12px; color: #333; padding: 10px 15px; background: #fff; line-height: 20px;}
+.settlement .weui-cells__title{ font-size: 12px; color: #333; line-height: 22px; margin: 13px 0 1px;}
+.settlement .key{ color: #666;}
+.settlement .weui-cell__ft{ color: #666E78;}
+.settlement .error{ color: #FC5C3F; font-size: 12px; margin: 20px 15px;}
+.settlement .bt{ position: fixed; bottom: 0; width: 100%;}
+.settlement .bt .weui-btn{ border-radius: 0; width: 100%; height: 45px; line-height: 45px; font-size: 18px; margin: 0;}
+.settlement .bt .weui-btn_plain-disabled{ color: #fff; background: #CACACA;}
+.weui-btn_plain-disabled:after{ border-width: 0;}
+.settlement-mx .weui-cells{ margin-top: 0;}
+.settlement-mx .weui-cell{ padding: 10px; font-size: 14px; color: #666E78; line-height: 25px;}
+
+/* 联系艺龙 */
+.contact-us .pody{ font-size: 14px; color: #333; padding: 15px; background: #fff; line-height: 20px; position: relative;}
+.contact-us .pody:after { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-top: 1px solid #e5e5e5; color: #e5e5e5; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(.5); transform: scaleY(.5); z-index: 2; }
+.contact-us .weui-cells__title{ font-size: 12px; color: #333; line-height: 24px; margin: 4px 0 0;}
+.contact-us .weui-cell{ font-size: 14px; color: #666E78; line-height: 24px;}
+.contact-us .weui-cell p:nth-child(n+3){position: relative; line-height: 30px; padding-top: 10px; margin-top: 5px;}
+.contact-us .weui-cell p:nth-child(n+3):before { content: " "; position: absolute; left: 0; top: 0px; right: 0; height: 1px; border-top: 1px dashed #e5e5e5; color: #E2E2E2; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(.5); transform: scaleY(.5); }
+.contact-us .weui-cell a{ color: #1EABF1;}
+.contact-us .mt0{ margin-top: 0;}
+.contact-us .mt0:before{ display: none;}

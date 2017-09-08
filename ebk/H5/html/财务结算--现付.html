@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>财务结算</title>
+    <link rel="stylesheet" href="../css/weui.min.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+</head>
+<body>
+<div class="page settlement">
+    <div class="hd-tips">
+        <i></i>
+        <div class="note">
+            <p style="left: 0px;">如有疑问请登录ebooking.elong.com查看账单明细，或联系如有疑问请登录ebooking.elong.com查看账单明细，或联系</p>
+        </div>
+    </div>
+    <div class="page__bd">
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <div class="weui-navbar__item weui-bar__item_on">现付</div>
+                <div class="weui-navbar__item">预付</div>
+            </div>
+            <div class="weui-tab__panel">
+                <div class="tab-btn"><a class="weui-btn order-btn" href="#">待确认</a><a class="weui-btn order-btn" href="#">对账中</a><a class="weui-btn order-btn" href="#">待付款</a><a class="weui-btn weui-btn_gradual weui-btn_submit" href="#">已完成</a></div>
+                <!-- 待确认 -->
+                <div class="settlement-con">
+                    <!-- 没有订单时显示 -->
+                    <div class="no-data" style="display: none;">
+                        <img src="../images/no-data.png">
+                        <p>贵酒店暂无已完成的账单哦~</p>
+                    </div>
+                    <!-- 没有订单 end -->
+
+                    <!-- 出错了 -->
+                    <div class="no-data" style="display: none;">
+                        <img src="../images/error.png">
+                        <p>出错了~</p>
+                    </div>
+                    <!-- 出错了 end -->
+
+                    <div class="weui-cells cells-list">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 150</span>
+                                <span class="operate"><a href="#">确认</a></span>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 45,263.89</span>
+                                <span class="operate"><a href="#">确认</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 待确认 end -->
+                <!-- 对账中 -->
+                <div class="settlement-con">
+                    <div class="weui-cells cells-list">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 150</span>
+                                <span class="operate">约7个工作日内完成</span>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 15,263.89</span>
+                                <span class="operate">约7个工作日内完成</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 对账中 end -->
+                <!-- 待付款 -->
+                <div class="settlement-con">
+                    <div class="weui-cells cells-list">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 150</span>
+                                <span class="operate"><a href="#">在线支付</a></span>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 150</span>
+                                <span class="operate"><a class="keep" href="#">继续支付</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 待付款 end -->
+                <!-- 已完成 -->
+                <div class="settlement-con">
+                    <div class="weui-cells cells-list">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 150</span>
+                                <span class="operate">2017-08-19 10:30</span>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <span class="date">2017-08</span>
+                                <span class="sum">&yen 150</span>
+                                <span class="operate">2017-08-19 10:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 已完成 end -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 刷新加载图标 -->
+    <div class="loading">
+        <i class="up"></i>
+    </div>
+    <div class="loading">
+        <i class="down"></i>
+    </div>
+</div>
+</body>
+</html>
